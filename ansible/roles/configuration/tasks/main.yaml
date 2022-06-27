@@ -1,0 +1,11 @@
+- name: Git
+  import_tasks: git.yaml
+  become: true
+  become_user: george
+- name: KDE
+  import_tasks: kde.yaml
+  become: true
+  become_user: george
+- name: Mounts
+  import_tasks: fstab.yaml
+  become: true

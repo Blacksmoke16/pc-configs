@@ -1,0 +1,22 @@
+# https://github.com/ansible-collections/ansible.posix/blob/main/plugins/modules/mount.py
+
+- name: 'fstab : Game drive'
+  become: true
+  ansible.posix.mount:
+    src: UUID=f91c894a-780e-415f-b5f3-f94dc0dc431d
+    path: /run/media/george/secondary
+    opts: rw,relatime,noatime
+    fstype: ext4
+    state: mounted
+    boot: true
+    passno: 2
+- name: 'fstab : Archive drive'
+  become: true
+  ansible.posix.mount:
+    src: UUID=856a3591-b098-42eb-b027-539a18b307fe
+    path: /run/media/george/Archive
+    opts: rw,relatime,noatime
+    fstype: ext4
+    state: present
+    boot: false
+    passno: 2

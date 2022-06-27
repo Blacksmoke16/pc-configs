@@ -1,0 +1,4 @@
+- hosts: theStone
+  name: Configuration
+  roles:
+    - configuration
