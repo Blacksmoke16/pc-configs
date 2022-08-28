@@ -1,27 +1,22 @@
 # pc-configs
 
-Provides automation for setting up a new Linux PC install.
+Centralized location for both system (`/etc`) and dotfile (`/home`) configurations.
 
-## Archiso
+## Aconfmgr
 
-TODO
+[aconfmgr](https://github.com/CyberShadow/aconfmgr/) manages all _system_ level configuration.
+This includes everything in `/etc`, which packges are installed, and what systemd services are enabled.
 
-## Ansible
+## Chezmoi
 
-[Ansible](https://www.ansible.com/) is the core tool used to configure the machine once we have things bootable.
+[chezmoi](https://www.chezmoi.io/) manages _user_ level configuration between various machines. 
+This includes `git`, `bash`, `sway`, and everything that is specific to my local install no matter what machine I am on.
+E.g. personal PC verus work Mac.
 
 ### Setup
 
-Ansible requires python (ew) to run, so first ensure it, and `pip` are installed:
+Both tool require `git`, so be sure that's installed.
 
-```sh
-yay -S ansible python-pip
-```
-
-Then from here we can kick off the job
-
-```sh
-make configure
-```
-
-TIP: Add `-D` to show diffs or `-C` for a dry run.
+1. Clone the repo
+1. Apply user configuration `TODO`
+1. Apply system configuration `aconfmgr apply`
