@@ -1,0 +1,42 @@
+#
+# ~/.bash_profile
+#
+
+# Utility functions
+
+exists() {
+    test -x "$(command -v "$1")"
+}
+
+# Configure $EDITOR and $VISUAL
+export EDITOR=nano
+exists subl && EDITOR=subl || 
+	{ exists vim && EDITOR=vim; } || 
+	{ exists vi && EDITOR=vi; }
+
+export VISUAL=subl
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Setup application related ENV vars
+export PAGER=less
+export LESS=-R
+export LESSHISTFILE="-" # Disable the ~/.lesshst file
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='38;5;196'
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+# Explicitly configure XDG vars just to have them
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# Configure non XDG compliant apps
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+
+# Define var for other scripts to reference
+GIT_DIR="{{ .chezmoi.homeDir }}/{{ .git.dir }}"
+
+[ "$BASH_VERSION" -a -z "$POSIXLY_CORRECT" ] && . "$HOME/.bashrc"

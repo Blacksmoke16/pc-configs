@@ -6,3 +6,4 @@ AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, 
 AddPackage clang # C language family frontend for LLVM
 AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
+AddPackage --foreign oq-bin

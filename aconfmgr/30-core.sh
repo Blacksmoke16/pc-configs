@@ -18,7 +18,9 @@ CopyFile /etc/pacman.d/mirrorlist
 # Add primary packages that are needed no matter what DE/WM are being used
 #
 
-AddPackage --foreign aconfmgr-git # config manager
+# config managers
+AddPackage --foreign aconfmgr-git 
+AddPackage chezmoi
 
 AddPackage fakeroot # Required by yay
 
@@ -28,7 +30,9 @@ AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage ttf-roboto-mono # A monospaced addition to the Roboto type family.
 
 AddPackage openssh # Premier connectivity tool for remote login with the SSH protocol
+AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
+AddPackage bashtop # Linux resource monitor
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket
