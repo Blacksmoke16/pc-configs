@@ -1,0 +1,38 @@
+[core]
+    autocrlf = input
+    editor = nano
+    warnAmbiguousRefs = true
+[branch]
+    autosetuprebase = always
+[commit]
+    gpgsign = true
+[diff]
+    algorithm = histogram
+[fetch]
+    prune = true
+    pruneTags = true
+[help]
+    autocorrect = prompt
+[init]
+    defaultBranch = master
+[merge]
+    conflictStyle = zdiff3
+[pull]
+    rebase = true
+[rebase]
+    autosquash = true
+[tag]
+    forceSignAnnotated = true
+[user]
+    name = {{ .git.name }}
+    email = {{ .git.email }}
+    signingkey = 1E3D9616D23702FF
+    useConfigOnly = true
+[alias]
+    co = checkout
+    st = status -sb
+    fo = fetch origin
+    po = !git pull origin $1
+    fco = !git fo && git co $1 && git po $1
+    latest = !git fo && git co master && git pull origin master
+    update = !git fo && git merge origin/master

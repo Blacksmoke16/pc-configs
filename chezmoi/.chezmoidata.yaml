@@ -2,3 +2,5 @@
 
 git: 
   dir: 'dev/git'
+  name: 'George Dietrich'
+  email: 'george@dietrich.app'
