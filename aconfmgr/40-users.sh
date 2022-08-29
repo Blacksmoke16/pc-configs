@@ -14,6 +14,9 @@ AddPackage foot # Fast, lightweight, and minimalistic Wayland terminal emulator
 CopyFile /etc/shells
 CopyFile /etc/inputrc
 
+# Utilities
+AddPackage unzip # open .zip
+
 # Common user binaries
 CopyFile /usr/local/bin/tax-calc 755
 CopyFile /usr/local/bin/uuid 755

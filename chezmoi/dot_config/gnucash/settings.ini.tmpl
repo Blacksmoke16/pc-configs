@@ -1,0 +1,74 @@
+[GnuCash/dialogs/business/bill]
+notify-when-due=true
+tax-included=false
+
+[GnuCash/dialogs/business/invoice-search]
+search-for-active-only=true
+
+[GnuCash/dialogs/business/invoice]
+enable-toolbuttons=false
+notify-when-due=false
+tax-included=false
+
+[GnuCash/dialogs/new-user]
+first-startup=false
+
+[GnuCash/dialogs/open-save]
+last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books'
+
+[GnuCash/dialogs/print-checks]
+default-font='Roboto Mono 12'
+
+[GnuCash/dialogs/scheduled-trans/since-last-run]
+last-geometry=(3383, 115, 993, 480)
+review-transactions=true
+show-notify-window-at-file-open=false
+
+[GnuCash/dialogs/scheduled-trans/transaction-editor]
+create-auto=true
+last-geometry=(3038, 86, 1511, 650)
+notify=false
+
+[GnuCash/dialogs/tip-of-the-day]
+current-tip=8
+show-at-startup=false
+
+[GnuCash/general]
+account-separator='colon'
+autosave-interval-minutes=0.0
+autosave-show-explanation=false
+clock-24h=true
+currency-choice-locale=false
+currency-choice-other=true
+date-completion-thisyear=false
+date-format=3
+force-price-decimal=false
+grid-lines-horizontal=true
+grid-lines-vertical=true
+retain-days=30.0
+reversed-accounts-credit=false
+reversed-accounts-incomeexpense=false
+reversed-accounts-none=true
+show-account-color=false
+show-account-color-tabs=false
+show-splash-screen=false
+use-accounting-labels=true
+
+[GnuCash/general/finance-quote]
+alphavantage-api-key='{{ (bitwarden "item" "f6434f81-3cb1-42f6-92dd-ae8d01573285").notes }}'
+
+[GnuCash/general/register]
+alternate-color-by-transaction=false
+default-style-autoledger=true
+default-style-ledger=false
+double-line-mode=false
+future-after-blank-transaction=true
+show-leaf-account-names=false
+use-gnucash-color-theme=true
+
+[GnuCash/history]
+file0='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
+
+[GnuCash/warnings/permanent]
+reg-recd-split-mod=-8
+reg-trans-mod=-3

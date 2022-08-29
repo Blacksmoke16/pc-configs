@@ -1,0 +1,4 @@
+# These will only exist on my main machine
+{{- if eq .chezmoi.hostname "theStone" }}
+.config/gnucash/**
+{{- end }}

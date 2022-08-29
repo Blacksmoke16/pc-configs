@@ -36,6 +36,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 
+# Custom PATH
+PATH="$HOME/.local/bin/:$PATH"
+
 # Define var for other scripts to reference
 GIT_DIR="{{ .chezmoi.homeDir }}/{{ .git.dir }}"
 
