@@ -1,0 +1,53 @@
+#
+# ~/.bashrc
+#
+
+# ALIASES
+
+alias reload='. $HOME/.bash_profile'
+
+alias ls='ls -F --color=auto'
+alias l='ls -lah'
+alias df='df -h'
+alias du='du -sh'
+
+if [ -f $GIT_DIR/crystal ]; then
+    alias ccrystal=$HOME/$GIT_DIR/crystal/bin/crystal
+fi
+
+alias cr='crystal'
+alias wcr='nodemon --exec crystal run --watch src'
+alias wcrt='nodemon --exec crystal run --watch test.cr test.cr'
+
+alias wcr-spec='nodemon --ext '*' -I --exec crystal spec --watch spec --watch src -- --order=random'
+alias keysum='ssh-keygen -lf'
+alias ss='sha256sum'
+alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
+alias update-prices="gnucash-cli --quotes=get $XDG_DATA_HOME/gnucash/books/george.gnucash"
+alias yeet='sudo yay -Rsnu'
+
+# Force aconfmgr to not use $XDG_CONFIG_HOME
+alias aconfmgr='aconfmgr -c $GIT_DIR/pc-configs/aconfmgr'
+
+# FUNCTIONS
+
+# $1 - file to encrypt
+function encrypt() {
+  gpg --output "$1.gpg" --symmetric $1;
+}
+
+# $1 - file to decrypt
+function decrypt() {
+  gpg --output "$1.decrypted" --decrypt $1;
+}
+
+# Make the shell aware of the GPG agent
+export GPG_TTY="$(tty)"
+
+. $XDG_DATA_HOME/scripts/git-prompt.sh
+. $XDG_DATA_HOME/scripts/ps1.sh
+
+PS1="\n$(__mkps1_box_top)$(__mkps1_debian_chroot)$(__mkps1_exitcode)$(__mkps1_time)$(__mkps1_username)$(__mkps1_workdir)$(__mkps1_git)\n$(__mkps1_box_bottom)$(__mkps1_user_prompt)";
+
+HISTCONTROL=ignoreboth:erasedups
+set +o history # Bash history has never been useful to me

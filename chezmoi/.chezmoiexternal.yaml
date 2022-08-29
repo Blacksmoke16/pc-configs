@@ -1,0 +1,4 @@
+# Git prompt script
+.local/share/scripts/git-prompt.sh:
+  type: file
+  url: 'https://raw.githubusercontent.com/git/git/v2.37.2/contrib/completion/git-prompt.sh'
