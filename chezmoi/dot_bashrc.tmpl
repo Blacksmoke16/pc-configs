@@ -6,10 +6,15 @@
 
 alias reload='. $HOME/.bash_profile'
 
+alias grep='grep --color=auto'
 alias ls='ls -F --color=auto'
 alias l='ls -lah'
 alias df='df -h'
 alias du='du -sh'
+
+{{ if eq .chezmoi.os "linux"  -}}
+alias pbcopy='wl-copy'
+{{ end -}}
 
 if [ -f $GIT_DIR/crystal ]; then
     alias ccrystal=$HOME/$GIT_DIR/crystal/bin/crystal
@@ -44,10 +49,20 @@ function decrypt() {
 # Make the shell aware of the GPG agent
 export GPG_TTY="$(tty)"
 
+# Place to put stuff local to a specific machine not worth sharing
+if [ -r "$HOME/.bashrc.local" ]; then
+    . "$HOME/.bashrc.local"
+fi
+
 . $XDG_DATA_HOME/scripts/git-prompt.sh
 . $XDG_DATA_HOME/scripts/ps1.sh
 
-PS1="\n$(__mkps1_box_top)$(__mkps1_debian_chroot)$(__mkps1_exitcode)$(__mkps1_time)$(__mkps1_username)$(__mkps1_workdir)$(__mkps1_git)\n$(__mkps1_box_bottom)$(__mkps1_user_prompt)";
-
+PS1="\n$(__mkps1_box_top)$(__mkps1_debian_chroot)$(__mkps1_exitcode)$(__mkps1_time)$(__mkps1_username)$(__mkps1_workdir)$(__mkps1_git)\n$(__mkps1_box_bottom)$(__mkps1_user_prompt)"
 HISTCONTROL=ignoreboth:erasedups
-set +o history # Bash history has never been useful to me
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=20000
+HISTFILESIZE=20000

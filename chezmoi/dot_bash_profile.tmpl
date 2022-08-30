@@ -23,7 +23,6 @@ export VISUAL=subl
 export PAGER=less
 export LESS='-R -M'
 export LESSHISTFILE='-' # Disable the ~/.lesshst file
-export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='38;5;196'
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
@@ -42,5 +41,10 @@ PATH="$HOME/.local/bin/:$PATH"
 
 # Define var for other scripts to reference
 GIT_DIR="{{ .chezmoi.homeDir }}/{{ .git.dir }}"
+
+# Place to put stuff local to a specific machine not worth sharing
+if [ -r "$HOME/.bash_profile.local" ]; then
+    . "$HOME/.bash_profile.local"
+fi
 
 [ "$BASH_VERSION" -a -z "$POSIXLY_CORRECT" ] && . "$HOME/.bashrc"
