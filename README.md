@@ -17,6 +17,7 @@ E.g. personal PC verus work Mac.
 
 Both tool require `git`, so be sure that's installed.
 
-1. Clone the repo
-1. Apply user configuration `TODO`
-1. Apply system configuration `aconfmgr apply`
+- Clone the repo
+- `cd pc-configs`
+- Apply user configuration `chezmoi apply -S ./chezmoi/`
+- Apply system configuration `aconfmgr apply` (if applicable)

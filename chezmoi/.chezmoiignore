@@ -1,5 +1,2 @@
-# These will only exist on my main machine
-{{- if eq .chezmoi.hostname "theStone" }}
 .config/gnucash/**
 .local/bin/* # Any custom binaries I create will go in /usr/local/bin
-{{- end }}
