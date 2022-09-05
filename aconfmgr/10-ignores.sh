@@ -90,3 +90,8 @@ IgnorePath '/usr/share/icons/*/icon-theme.cache'
 
 # kernel
 IgnorePath '/usr/lib/modules/*-arch*'
+
+# Docker
+IgnorePath '/etc/docker/key.json' # https://stackoverflow.com/questions/47573820/what-is-etc-docker-key-json
+IgnorePath '/opt/containerd/*'
+IgnorePath '/var/lib/docker/*'

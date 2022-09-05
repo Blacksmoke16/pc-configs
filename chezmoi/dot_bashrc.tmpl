@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# Define var for other scripts to reference
+GIT_DIR="{{ .chezmoi.homeDir }}/{{ .git.dir }}"
+
 # ALIASES
 
 alias reload='. $HOME/.bash_profile'
@@ -16,20 +19,20 @@ alias du='du -sh'
 alias pbcopy='wl-copy'
 {{ end -}}
 
-if [ -f $GIT_DIR/crystal ]; then
-    alias ccrystal=$HOME/$GIT_DIR/crystal/bin/crystal
+if [ -d $GIT_DIR/crystal ]; then
+    alias ccrystal=$GIT_DIR/crystal/bin/crystal
 fi
+
+alias services='sudo systemctl --type=service --state=running'
 
 alias cr='crystal'
 alias wcr='nodemon --exec crystal run --watch src'
 alias wcrt='nodemon --exec crystal run --watch test.cr test.cr'
 
 alias wcr-spec='nodemon --ext '*' -I --exec crystal spec --watch spec --watch src -- --order=random'
-alias keysum='ssh-keygen -lf'
 alias ss='sha256sum'
 alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
 alias update-prices="gnucash-cli --quotes=get $XDG_DATA_HOME/gnucash/books/george.gnucash"
-alias yeet='sudo yay -Rsnu'
 
 # Force aconfmgr to not use $XDG_CONFIG_HOME
 alias aconfmgr='aconfmgr -c $GIT_DIR/pc-configs/aconfmgr'

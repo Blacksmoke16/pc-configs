@@ -6,6 +6,9 @@ AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based c
 AddPackage wofi # launcher for wlroots-based wayland compositors
 AddPackage xorg-xwayland # run X clients under wayland
 
+# Themes
+AddPackage breeze-gtk
+
 # Screenshot
 AddPackage slurp # Select a region in a Wayland compositor
 AddPackage grim # Screenshot utility for Wayland

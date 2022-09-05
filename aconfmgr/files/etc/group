@@ -51,3 +51,4 @@ avahi:x:972:
 polkitd:x:102:
 rtkit:x:133:
 usbmux:x:140:
+docker:x:971:

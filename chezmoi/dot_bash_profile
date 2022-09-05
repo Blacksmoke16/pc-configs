@@ -25,6 +25,11 @@ export LESS='-R -M'
 export LESSHISTFILE='-' # Disable the ~/.lesshst file
 export GREP_COLOR='38;5;196'
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+export GTK_THEME='Breeze-Dark'
+
+# Setup dev related ENV vars
+export CC=clang
+export CXX=clang
 
 # Explicitly configure XDG vars just to have them
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -38,9 +43,6 @@ export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 
 # Custom PATH
 PATH="$HOME/.local/bin/:$PATH"
-
-# Define var for other scripts to reference
-GIT_DIR="{{ .chezmoi.homeDir }}/{{ .git.dir }}"
 
 # Place to put stuff local to a specific machine not worth sharing
 if [ -r "$HOME/.bash_profile.local" ]; then
