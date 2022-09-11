@@ -2,6 +2,7 @@
 AddPackage --foreign gitkraken # The intuitive, fast, and beautiful cross-platform Git client
 AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, markup and prose
 AddPackage --foreign typora # A minimal markdown editor and reader.
+AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 
 # Docker
 AddPackage docker
@@ -18,6 +19,10 @@ AddPackage llvm # Compiler infrastructure
 AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
 AddPackage --foreign oq-bin
+
+# PHP
+# AddPackage php # A general-purpose scripting language that is especially suited to web development
+# AddPackage composer # Dependency Manager for PHP
 
 # https://github.com/the-benchmarker/web-frameworks
 # AddPackage ruby

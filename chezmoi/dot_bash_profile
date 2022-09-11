@@ -38,11 +38,17 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Configure non XDG compliant apps
+# https://wiki.archlinux.org/title/XDG_Base_Directory#Support
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
 # Custom PATH
 PATH="$HOME/.local/bin/:$PATH"
+export PATH="$PATH:/home/george/.local/share/JetBrains/Toolbox/scripts"
 
 # Place to put stuff local to a specific machine not worth sharing
 if [ -r "$HOME/.bash_profile.local" ]; then

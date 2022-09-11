@@ -44,7 +44,7 @@ IgnorePackage --foreign yay-bin
 IgnorePath '/etc/ld.so.cache'
 
 # info
-IgnorePath '/usr/share/info/dir'
+IgnorePath '/usr/share/info/*'
 
 # locale
 IgnorePath '/usr/lib/locale/locale-archive'
@@ -95,3 +95,6 @@ IgnorePath '/usr/lib/modules/*-arch*'
 IgnorePath '/etc/docker/key.json' # https://stackoverflow.com/questions/47573820/what-is-etc-docker-key-json
 IgnorePath '/opt/containerd/*'
 IgnorePath '/var/lib/docker/*'
+
+# Java
+IgnorePath '/usr/lib/jvm/*'
