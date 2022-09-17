@@ -1,3 +1,6 @@
+# GPU
+AddPackage nvidia # NVIDIA drivers for linux
+
 # Sway & friends
 AddPackage mako # Lightweight notification daemon for Wayland
 AddPackage sway # Tiling Wayland compositor and replacement for the i3 window manager

@@ -23,4 +23,5 @@ CreateLink /var/lib/dbus/machine-id /etc/machine-id
 
 # initramfs
 CopyFile /etc/mkinitcpio.conf
+CopyFile /etc/modprobe.d/nvidia.conf
 CreateLink /etc/os-release ../usr/lib/os-release

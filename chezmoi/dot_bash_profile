@@ -19,11 +19,20 @@ export VISUAL=subl
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Setup vars for GPU
+export XDG_SESSION_TYPE=wayland  
+export XDG_CURRENT_DESKTOP=sway  
+export GDK_BACKEND=wayland  
+export GBM_BACKEND=nvidia-drm  
+export __GLX_VENDOR_LIBRARY_NAME=nvidia  
+export WLR_NO_HARDWARE_CURSORS=1  
+export WLR_DRM_NO_ATOMIC=1  
+
 # Setup application related ENV vars
 export PAGER=less
 export LESS='-R -M'
 export LESSHISTFILE='-' # Disable the ~/.lesshst file
-export GREP_COLOR='38;5;196'
+export GREP_COLORS='mt=38;5;196'
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 export GTK_THEME='Breeze-Dark'
 
