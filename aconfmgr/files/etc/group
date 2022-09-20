@@ -21,7 +21,7 @@ disk:x:995:
 input:x:994:
 kmem:x:993:
 kvm:x:992:
-lp:x:991:
+lp:x:991:cups
 optical:x:990:
 render:x:989:
 sgx:x:988:
@@ -53,3 +53,4 @@ rtkit:x:133:
 usbmux:x:140:
 docker:x:971:
 nvidia-persistenced:x:143:
+cups:x:209:
