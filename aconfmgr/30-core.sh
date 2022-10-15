@@ -13,6 +13,7 @@ CopyFile /etc/hostname
 # pacman
 CopyFile /etc/pacman.conf
 CopyFile /etc/pacman.d/mirrorlist
+CreateFile /var/lib/systemd/timers/stamp-archlinux-keyring-wkd-sync.timer > /dev/null
 
 #
 # Add primary packages that are needed no matter what DE/WM are being used

@@ -5,6 +5,7 @@ IgnorePath '/etc/group-'
 IgnorePath '/etc/shadow*'
 IgnorePath '/etc/gshadow*'
 IgnorePath '/var/db/sudo/lectured/*'
+IgnorePath '/var/db/nscd/*'
 
 # udev
 IgnorePath '/etc/udev/hwdb.bin'

@@ -1,5 +1,9 @@
 # GPU
-AddPackage nvidia-open # NVIDIA open kernel modules
+AddPackage nvidia # NVIDIA drivers for linux
+AddPackage lib32-nvidia-utils # NVIDIA drivers utilities (32-bit)
+CopyFile /etc/pacman.d/hooks/nvidia.hook
+CreateLink /etc/systemd/system/systemd-hibernate.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
+CreateLink /etc/systemd/system/systemd-suspend.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
 
 # Sway & friends
 AddPackage mako # Lightweight notification daemon for Wayland
@@ -48,3 +52,7 @@ AddPackage playerctl # mpris media player controller and lib for spotify, vlc, a
 AddPackage pulseaudio # A featureful, general-purpose sound server
 AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
 CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
+
+# Gaming
+AddPackage steam # Valve's digital software delivery system
+AddPackage lib32-systemd # system and service manager (32-bit)
