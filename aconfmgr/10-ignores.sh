@@ -61,6 +61,7 @@ IgnorePath '/etc/ssl/certs'
 
 # pacman
 IgnorePath '/etc/pacman.d/gnupg'
+IgnorePath '/etc/pacman.d/mirrorlist.pacnew'
 IgnorePath '/var/lib/pacman/local/*'
 IgnorePath '/var/lib/pacman/sync/*'
 IgnorePath '/var/lib/tpm2-tss/system/keystore'
