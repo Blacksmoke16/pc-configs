@@ -40,6 +40,12 @@ function PrinterConfFilter() {
 }
 AddFileContentFilter '/etc/cups/printers.conf' PrinterConfFilter
 CopyFile /etc/cups/printers.conf 600
+AddPackage sane # Scanner Access Now Easy
+CopyFile /etc/sane.d/net.conf
+CopyFile /etc/sane.d/dll.conf
+AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
+# sudo brsaneconfig4 -a name="color" model="mfc-j835dw" ip=192.168.1.31
+CopyFile /opt/brother/scanner/brscan4/brsanenetdevice4.cfg
 
 # Gnucash
 AddPackage gnucash # Personal and small-business financial-accounting application

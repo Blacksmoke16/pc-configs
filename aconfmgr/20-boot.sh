@@ -9,6 +9,9 @@ AddPackage linux-firmware # Firmware files for Linux
 AddPackage nano # Pico editor clone with enhancements
 AddPackage sudo # Give certain users the ability to run some commands as root
 
+SetFileProperty /usr/bin/newgidmap mode ''
+SetFileProperty /usr/bin/newuidmap mode ''
+
 # filesytem
 CopyFile /etc/fstab
 CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer

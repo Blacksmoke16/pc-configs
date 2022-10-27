@@ -14,7 +14,7 @@ CopyFile /etc/hostname
 CopyFile /etc/pacman.conf
 CopyFile /etc/pacman.d/mirrorlist
 CreateFile /var/lib/systemd/timers/stamp-archlinux-keyring-wkd-sync.timer > /dev/null
-AddPackage --foreign reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 
 #
 # Add primary packages that are needed no matter what DE/WM are being used
