@@ -20,7 +20,6 @@ CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd
 CopyFile /boot/loader/entries.srel 755 # https://systemd.io/BOOT_LOADER_SPECIFICATION/#standard-conformance-marker-file
 CopyFile /boot/loader/entries/arch.conf 755
 CopyFile /boot/loader/loader.conf 755
-SetFileProperty /boot/intel-ucode.img mode 755
 CopyFile /etc/machine-id 444
 CreateLink /var/lib/dbus/machine-id /etc/machine-id
 

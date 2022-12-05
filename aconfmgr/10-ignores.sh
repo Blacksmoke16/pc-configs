@@ -24,6 +24,7 @@ IgnorePath '/boot/EFI/systemd/systemd-bootx64.efi'
 IgnorePath '/boot/initramfs*.img'
 IgnorePath '/boot/loader/random-seed'
 IgnorePath '/boot/vmlinuz-linux'
+IgnorePath '/boot/intel-ucode.img'
 IgnorePath '/etc/mkinitcpio.d/linux.preset'
 
 # systemd logs

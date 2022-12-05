@@ -20,6 +20,7 @@ AddPackage llvm # Compiler infrastructure
 AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
 AddPackage --foreign oq-bin
+# AddPackage terraform
 
 # PHP
 # AddPackage php # A general-purpose scripting language that is especially suited to web development
