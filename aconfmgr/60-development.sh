@@ -1,10 +1,10 @@
 # General
 AddPackage which # A utility to show the full path of commands
 AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, markup and prose
+AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 AddPackage --foreign gitkraken # The intuitive, fast, and beautiful cross-platform Git client
-AddPackage --foreign typora # A minimal markdown editor and reader.
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
-AddPackage --foreign postman9-bin # Build, test, and document your APIs faster
+AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 
 # Docker
 AddPackage docker

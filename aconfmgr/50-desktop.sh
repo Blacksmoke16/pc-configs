@@ -1,6 +1,7 @@
 # GPU
 AddPackage nvidia # NVIDIA drivers for linux
 AddPackage lib32-nvidia-utils # NVIDIA drivers utilities (32-bit)
+AddPackage vulkan-validation-layers # Vulkan Validation Layers
 CopyFile /etc/pacman.d/hooks/nvidia.hook
 CreateLink /etc/systemd/system/systemd-hibernate.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
 CreateLink /etc/systemd/system/systemd-suspend.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
