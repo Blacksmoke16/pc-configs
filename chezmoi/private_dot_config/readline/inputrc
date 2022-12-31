@@ -1,0 +1,11 @@
+# Single tab complete word and show possible completions
+set show-all-if-ambiguous on
+
+# Color files by types
+set colored-stats On
+
+# Append char to indicate type
+set visible-stats On
+
+# Mark symlinked directories
+set mark-symlinked-directories On

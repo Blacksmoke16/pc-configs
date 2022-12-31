@@ -53,10 +53,7 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-icons": {
-      "default": [
-        "🔊",
-        "🔊"
-      ]
+      "default": "🔊"
     },
     "format-muted": "MUTE"
   },

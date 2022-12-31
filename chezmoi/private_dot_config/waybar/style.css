@@ -29,6 +29,10 @@ window#waybar {
 #pulseaudio {
   color: #268bd2;
 }
+#pulseaudio.muted {
+  background: red;
+}
+
 #memory {
   color: #2aa198;
 }

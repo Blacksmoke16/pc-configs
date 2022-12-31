@@ -1,0 +1,5 @@
+{
+  "enable_for_syntaxes_list": [
+    "Packages/JSON/JSON.sublime-syntax"
+  ]
+}
