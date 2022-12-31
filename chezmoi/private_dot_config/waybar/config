@@ -1,0 +1,72 @@
+{
+  "clock": {
+    "format": "{:%a %F}",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "CPU {usage:2}%",
+    "interval": 5
+  },
+  "custom/left-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "layer": "top",
+  "memory": {
+    "format": "Mem {}%",
+    "interval": 5
+  },
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+  "modules-left": [
+    "tray",
+    "custom/right-arrow-dark"
+  ],
+  "modules-right": [
+    "custom/left-arrow-dark",
+    "pulseaudio",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "memory",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "cpu",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "clock"
+  ],
+  "position": "top",
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": [
+        "🔊",
+        "🔊"
+      ]
+    },
+    "format-muted": "MUTE"
+  },
+  "tray": {
+    "icon-size": 21,
+    "show-passive-items": true,
+    "spacing": 10
+  },
+  "wlr/taskbar": {
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "minimize"
+  }
+}
