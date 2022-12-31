@@ -5,6 +5,7 @@ AddPackage --foreign typora # A minimal markdown editor and reader.
 AddPackage --foreign gitkraken # The intuitive, fast, and beautiful cross-platform Git client
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
+AddPackage --foreign xxd-standalone # Hexdump utility from vim
 
 # Docker
 AddPackage docker

@@ -1,6 +1,7 @@
 {
   "clock": {
-    "format": "{:%a %F}",
+    "interval": 1,
+    "format": "{:%a %F %H:%M:%S}",
     "tooltip": false
   },
   "cpu": {
