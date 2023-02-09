@@ -36,6 +36,8 @@ AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage bashtop # Linux resource monitor
 AddPackage lf # A terminal file manager inspired by ranger
+AddPackage trash-cli # Command line trashcan (recycle bin) interface
+AddPackage diff-so-fancy # Good-looking diffs with diff-highlight and more
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket

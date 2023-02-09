@@ -1,10 +1,18 @@
+set shell bash
+set shellopts '-eu'
+set dirpreviews false
+
 set drawbox
+set ratios 1:1
+set tabstop 2
 
-set nopreview
-set ratios 2
-set info size:time
+map c copy
+map x cut
+map <c-k> clear
+map h set hidden!
 
-set hidden true
+cmd trash %trash-put $fx
+map <delete> trash
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -19,3 +27,11 @@ cmd extract ${{
         *.7z) 7z x $f;;
     esac
 }}
+
+map e extract
+
+cmd chezmoi-add ${{
+    chezmoi add $f
+}}
+
+map a chezmoi-add

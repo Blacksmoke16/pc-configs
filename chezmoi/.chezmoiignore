@@ -1,3 +1,24 @@
+{{ if ne .hostname "theStone" -}}
+# Explicitly whitelist non primary PC files
+**
+
+!.bash_profile
+!.bashrc
+
+!.local
+!.local/share
+!.local/share/scripts
+!.local/share/scripts/ps1.sh
+
+!.config
+!.config/git/**
+!.config/lf/**
+!.config/sublime-text/**
+!.config/Typora/**
+!.config/readline/**
+{{ else -}}
+# Exclude these on primary PC as they're handled via scripts
 .config/gnucash/**
 .config/Typora/profile.json
+{{ end -}}
  
