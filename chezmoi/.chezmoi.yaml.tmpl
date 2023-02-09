@@ -17,9 +17,12 @@
 
 sourceDir: {{ promptString "sourceDir" | quote }}
 format: yaml
+diff:
+  pager: diff-so-fancy | less --tabs=2 -RFX
 edit:
   minDuration: 0
 data:
+  unresolvable: true
   personal: {{ $personal }}
   hostname: {{ $hostname | quote }}
   email: {{ $email | quote }}
