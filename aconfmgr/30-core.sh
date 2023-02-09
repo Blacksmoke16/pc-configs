@@ -8,7 +8,7 @@ CopyFile /etc/locale.conf
 
 # dns
 CopyFile /etc/hostname
-# CopyFile /etc/hosts
+CopyFile /etc/hosts
 
 # pacman
 CopyFile /etc/pacman.conf
@@ -35,6 +35,7 @@ AddPackage openssh # Premier connectivity tool for remote login with the SSH pro
 AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage bashtop # Linux resource monitor
+AddPackage lf # A terminal file manager inspired by ranger
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket

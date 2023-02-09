@@ -19,7 +19,7 @@ AddPackage python # Next generation of the python high-level scripting language
 
 # Crystal
 AddPackage clang # C language family frontend for LLVM
-AddPackage llvm # Compiler infrastructure
+AddPackage llvm14 # Compiler infrastructure
 AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
 AddPackage --foreign oq-bin
