@@ -14,44 +14,26 @@ alias ls='ls -F --color=auto'
 alias l='ls -lah'
 alias df='df -h'
 alias du='du -sh'
-
-{{ if eq .chezmoi.os "linux"  -}}
-alias pbcopy='wl-copy'
 alias trash='trash-put'
-{{ end -}}
+alias cr='crystal'
+alias ss='sha256sum'
 
 if [ -d $GIT_DIR/crystal ]; then
     alias ccrystal=$GIT_DIR/crystal/bin/crystal
 fi
 
+{{ if eq .hostname "theStone" -}}
 alias services='sudo systemctl --type=service --state=running'
-
-alias cr='crystal'
-alias wcr='nodemon --exec crystal run --watch src'
-alias wcrt='nodemon --exec crystal run --watch test.cr test.cr'
-
-alias wcr-spec='nodemon --ext '*' -I --exec crystal spec --watch spec --watch src -- --order=random'
-alias ss='sha256sum'
 alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
 alias update-prices="gnucash-cli --quotes=get $XDG_DATA_HOME/gnucash/books/george.gnucash"
+alias pbcopy='wl-copy'
 
 # Force aconfmgr to not use $XDG_CONFIG_HOME
 alias aconfmgr='aconfmgr -c $GIT_DIR/pc-configs/aconfmgr'
 
-# FUNCTIONS
-
-# $1 - file to encrypt
-function encrypt() {
-  gpg --output "$1.gpg" --symmetric $1;
-}
-
-# $1 - file to decrypt
-function decrypt() {
-  gpg --output "$1.decrypted" --decrypt $1;
-}
-
 # Make the shell aware of the GPG agent
 export GPG_TTY="$(tty)"
+{{ end -}}
 
 # Place to put stuff local to a specific machine not worth sharing
 if [ -r "$HOME/.bashrc.local" ]; then
