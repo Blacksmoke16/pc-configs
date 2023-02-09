@@ -57,3 +57,8 @@
     latest = !git fo && git co master && git pull origin master
     update = !git fo && git merge origin/master
     sync   = !git latest && git fetch upstream && git rebase upstream/master
+
+{{ if eq .chezmoi.os "darwin" -}}
+[includeIf "gitdir:~/bsmoke/"]
+    path = ~/bsmoke/.gitconfig
+{{ end -}}
