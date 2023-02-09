@@ -50,6 +50,7 @@
     useConfigOnly = true
 [alias]
     co = checkout
+    cm = commit --all --message
     st = status -sb
     fo = fetch origin
     po = !git pull origin $1
@@ -57,6 +58,7 @@
     latest = !git fo && git co master && git pull origin master
     update = !git fo && git merge origin/master
     sync   = !git latest && git fetch upstream && git rebase upstream/master
+    unstage = reset --quiet
 
 {{ if eq .chezmoi.os "darwin" -}}
 [includeIf "gitdir:~/bsmoke/"]

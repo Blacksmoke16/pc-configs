@@ -33,5 +33,3 @@ map e extract
 cmd chezmoi-add ${{
     chezmoi add $f
 }}
-
-map a chezmoi-add
