@@ -1,4 +1,7 @@
+{{ if eq .chezmoi.hostname "theStone" -}}
 #!/bin/bash
 
 # profile.json hash: {{ include "private_dot_config/private_Typora/profile.json" | sha256sum }}
 cat {{ joinPath .chezmoi.sourceDir "/private_dot_config/private_Typora/profile.json" }} | oq -c . | tr -d '\n' | xxd -p | tr -d '\n' > $HOME/.config/Typora/profile.data
+
+{{ end -}}

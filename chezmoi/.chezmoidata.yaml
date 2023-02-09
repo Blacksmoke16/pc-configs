@@ -1,6 +1,0 @@
-# Default variable values that could change machine to machine or at some point in the future
-
-git: 
-  dir: 'dev/git'
-  name: 'George Dietrich'
-  email: 'george@dietrich.app'

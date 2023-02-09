@@ -17,6 +17,7 @@ alias du='du -sh'
 
 {{ if eq .chezmoi.os "linux"  -}}
 alias pbcopy='wl-copy'
+alias trash='gio trash'
 {{ end -}}
 
 if [ -d $GIT_DIR/crystal ]; then

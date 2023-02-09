@@ -39,3 +39,4 @@
     fco = !git fo && git co $1 && git po $1
     latest = !git fo && git co master && git pull origin master
     update = !git fo && git merge origin/master
+    sync   = !git latest && git fetch upstream && git rebase upstream/master

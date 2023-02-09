@@ -19,8 +19,17 @@
     "overridable",
     "middleware",
     "Architected",
+    "Entrypoint",
+    "entrypoints",
+    "entrypoint",
+    "runnable",
+    "variadic",
+    "keyless",
+    "customizability",
+    "persister",
+    "unhandled",
   ],
-  "font_size": 11,
+  "font_size": 12,
   "ignored_packages": [
     "Vintage"
   ],

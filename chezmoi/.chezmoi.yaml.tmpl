@@ -1,0 +1,27 @@
+{{/* Based on https://github.com/twpayne/dotfiles/blob/9da5dc4c90198d7b96bf974afb18c698716abd37/home/.chezmoi.toml.tmpl */}}
+
+{{/* boolean feature tags */}}
+{{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
+
+{{- $hostname := .chezmoi.hostname -}}
+{{- if eq $hostname "theStone" -}}
+{{-   $personal = true -}}
+{{- end -}}
+
+{{- $email := "george@dietrich.app" -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $email = "george.dietrich@jazzhr.com" -}}
+{{- end -}}
+
+sourceDir: {{ promptString "sourceDir" | quote }}
+format: yaml
+edit:
+  minDuration: 0
+data:
+  personal: {{ $personal }}
+  hostname: {{ $hostname | quote }}
+  email: {{ $email | quote }}
+  git:
+    dir: 'dev/git'
+    name: 'George Dietrich'
+    email: {{ $email | quote }}

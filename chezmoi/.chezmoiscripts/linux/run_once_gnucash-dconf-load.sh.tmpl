@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.hostname "theStone" -}}
 #!/bin/bash
 
 # Only applicable to my main machine
@@ -5,3 +6,5 @@
 # gnucash-settings.ini hash: {{ include "private_dot_config/gnucash/settings.ini.tmpl" | sha256sum }}
 dconf reset -f /org/gnucash/ && cat {{ joinPath .chezmoi.sourceDir "/private_dot_config/gnucash/settings.ini.tmpl" }} | chezmoi execute-template | dconf load /org/gnucash/
 {{- end }}
+
+{{ end -}}
