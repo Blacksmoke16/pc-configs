@@ -9,8 +9,10 @@
 {{- end -}}
 
 {{- $email := "george@dietrich.app" -}}
+{{- $gitDir := "/dev/git" -}}
 {{- if eq .chezmoi.os "darwin" -}}
 {{-   $email = "george.dietrich@jazzhr.com" -}}
+{{-   $gitDir = "/bsmoke" -}}
 {{- end -}}
 
 sourceDir: {{ promptString "sourceDir" | quote }}
@@ -23,4 +25,4 @@ data:
   email: {{ $email | quote }}
   name: 'George Dietrich'
   git:
-    dir: 'dev/git'
+    dir: {{ joinPath .chezmoi.homeDir $gitDir | quote }}
