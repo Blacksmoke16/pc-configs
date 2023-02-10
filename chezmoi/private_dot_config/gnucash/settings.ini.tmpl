@@ -13,9 +13,6 @@ tax-included=false
 [GnuCash/dialogs/new-user]
 first-startup=false
 
-[GnuCash/dialogs/open-save]
-last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books'
-
 [GnuCash/dialogs/print-checks]
 default-font='Roboto Mono 12'
 
@@ -30,7 +27,7 @@ last-geometry=(3038, 86, 1511, 650)
 notify=false
 
 [GnuCash/dialogs/tip-of-the-day]
-current-tip=8
+current-tip=1
 show-at-startup=false
 
 [GnuCash/general]
@@ -65,6 +62,9 @@ double-line-mode=false
 future-after-blank-transaction=true
 show-leaf-account-names=false
 use-gnucash-color-theme=true
+
+[GnuCash/dialogs/open-save]
+last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books'
 
 [GnuCash/history]
 file0='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
