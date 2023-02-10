@@ -16,6 +16,8 @@
 !.config/sublime-text/**
 !.config/Typora/**
 !.config/readline/**
+
+!.ssh/**
 {{ else -}}
 # Exclude these on primary PC as they're handled via scripts
 .config/gnucash/**
