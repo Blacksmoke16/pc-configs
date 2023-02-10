@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.hostname "theStone" -}}
+{{ if .personal -}}
 #! /usr/bin/env bash
 
 set -e # -e: exit on error
@@ -12,7 +12,7 @@ mkdir -p /tmp/chezmoi/packages/bw && cd $_
 curl -S -s -L -o bw.zip $ARCHIVE_URL
 curl -S -s -L -o bw.zip.sha256 $CHECKSUM_URL
 
-echo -n "$(cat bw.zip.sha256 | tr -d '\r') bw.zip" | sha256sum --check --status || { echo "Checksum did not match!"; exit 1; }
+echo -n "$(cat bw.zip.sha256 | tr -d '\r')  bw.zip" | sha256sum --check --status || { echo "Checksum did not match!"; exit 1; }
 
 unzip -q -o bw.zip
 

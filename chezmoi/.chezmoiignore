@@ -17,10 +17,21 @@
 !.config/Typora/**
 !.config/readline/**
 
-!.ssh/**
+!.ssh/
+!.ssh/config
+!.ssh/github.ed25519.priv
+!.ssh/github.ed25519.pub
 {{ else -}}
 # Exclude these on primary PC as they're handled via scripts
 .config/gnucash/**
 .config/Typora/profile.json
 {{ end -}}
+ 
+ {{ if ne .chezmoi.os "linux" }}
+.chezmoiscripts/linux/**
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+{{ end }}
  
