@@ -24,6 +24,9 @@ vpane-position=342
 [GnuCash/dialogs/new-user]
 first-startup=false
 
+[GnuCash/dialogs/open-save]
+last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books'
+
 [GnuCash/dialogs/print-checks]
 default-font='Roboto Mono 12'
 
@@ -71,6 +74,9 @@ show-account-color-tabs=false
 show-splash-screen=false
 use-accounting-labels=true
 
+[GnuCash/general/finance-quote]
+alphavantage-api-key='{{ (bitwarden "item" "f6434f81-3cb1-42f6-92dd-ae8d01573285").notes }}'
+
 [GnuCash/general/register]
 alternate-color-by-transaction=false
 default-style-autoledger=true
@@ -80,18 +86,9 @@ future-after-blank-transaction=true
 show-leaf-account-names=false
 use-gnucash-color-theme=true
 
+[GnuCash/history]
+file0='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
+
 [GnuCash/warnings/permanent]
 reg-recd-split-mod=-8
 reg-trans-mod=-3
-
-[GnuCash/dialogs/open-save]
-last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
-
-[GnuCash/general/finance-quote]
-alphavantage-api-key='{{ (bitwarden "item" "f6434f81-3cb1-42f6-92dd-ae8d01573285").notes }}'
-
-[GnuCash/dialogs/open-save]
-last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books'
-
-[GnuCash/history]
-file0='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
