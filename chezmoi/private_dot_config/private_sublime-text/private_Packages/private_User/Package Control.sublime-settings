@@ -4,6 +4,7 @@
   "installed_packages": [
     "Crystal",
     "EditorConfig",
+    "INI",
     "Package Control",
     "Pretty JSON",
     "SingleTrailingNewLine",

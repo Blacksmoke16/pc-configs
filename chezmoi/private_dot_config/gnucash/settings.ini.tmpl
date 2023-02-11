@@ -1,3 +1,6 @@
+[GnuCash/dialogs/account]
+last-geometry=(0, 0, 393, 646)
+
 [GnuCash/dialogs/business/bill]
 notify-when-due=true
 tax-included=false
@@ -10,11 +13,25 @@ enable-toolbuttons=false
 notify-when-due=false
 tax-included=false
 
+[GnuCash/dialogs/commodities]
+include-iso=false
+last-geometry=(0, 0, 2540, 1297)
+
+[GnuCash/dialogs/lot-viewer]
+last-geometry=(0, 0, 1739, 653)
+vpane-position=342
+
 [GnuCash/dialogs/new-user]
 first-startup=false
 
 [GnuCash/dialogs/print-checks]
 default-font='Roboto Mono 12'
+
+[GnuCash/dialogs/reconcile]
+last-geometry=(0, 0, 2540, 1297)
+
+[GnuCash/dialogs/report-saved-configs]
+last-geometry=(0, 0, 619, 317)
 
 [GnuCash/dialogs/scheduled-trans/since-last-run]
 last-geometry=(3383, 115, 993, 480)
@@ -29,6 +46,9 @@ notify=false
 [GnuCash/dialogs/tip-of-the-day]
 current-tip=1
 show-at-startup=false
+
+[GnuCash/dialogs/transfer]
+last-geometry=(0, 0, 483, 564)
 
 [GnuCash/general]
 account-separator='colon'
@@ -51,9 +71,6 @@ show-account-color-tabs=false
 show-splash-screen=false
 use-accounting-labels=true
 
-[GnuCash/general/finance-quote]
-alphavantage-api-key='{{ (bitwarden "item" "f6434f81-3cb1-42f6-92dd-ae8d01573285").notes }}'
-
 [GnuCash/general/register]
 alternate-color-by-transaction=false
 default-style-autoledger=true
@@ -63,12 +80,18 @@ future-after-blank-transaction=true
 show-leaf-account-names=false
 use-gnucash-color-theme=true
 
+[GnuCash/warnings/permanent]
+reg-recd-split-mod=-8
+reg-trans-mod=-3
+
+[GnuCash/dialogs/open-save]
+last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
+
+[GnuCash/general/finance-quote]
+alphavantage-api-key='{{ (bitwarden "item" "f6434f81-3cb1-42f6-92dd-ae8d01573285").notes }}'
+
 [GnuCash/dialogs/open-save]
 last-path='{{ env "XDG_DATA_HOME" }}/gnucash/books'
 
 [GnuCash/history]
 file0='{{ env "XDG_DATA_HOME" }}/gnucash/books/george.gnucash'
-
-[GnuCash/warnings/permanent]
-reg-recd-split-mod=-8
-reg-trans-mod=-3
