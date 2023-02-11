@@ -3,7 +3,6 @@ AddPackage which # A utility to show the full path of commands
 AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, markup and prose
 AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
 AddPackage --foreign typora # A minimal markdown editor and reader.
-AddPackage --foreign gitkraken # The intuitive, fast, and beautiful cross-platform Git client
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign xxd-standalone # Hexdump utility from vim
