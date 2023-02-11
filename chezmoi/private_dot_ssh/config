@@ -1,9 +1,10 @@
 Include config.local
 
 Host *
+    AddKeysToAgent yes
+    HashKnownHosts yes
     IgnoreUnknown UseKeychain
     IdentitiesOnly yes
-    AddKeysToAgent yes
     UseKeychain yes
 Host router
     HostName 192.168.1.1
