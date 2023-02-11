@@ -11,7 +11,7 @@ export VISUAL=subl
 
 # Setup application related ENV vars
 export PAGER=less
-export LESS='-RMF'
+export LESS='-RMF --mouse'
 export LESSHISTFILE='-' # Disable the ~/.lesshst file
 export GREP_COLORS='mt=38;5;196'
 export GTK_THEME='Breeze-Dark'
@@ -21,9 +21,10 @@ export CC=clang
 export CXX=clang
 
 # Explicitly configure XDG vars just to have them
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_BIN_HOME="$HOME/.local/bin"
+export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Configure non XDG compliant apps
@@ -44,7 +45,12 @@ if [ -r "$HOME/.bash_profile.local" ]; then
 fi
 
 {{ if eq .hostname "theStone" -}}
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+
 export PATH="$PATH:/home/george/.local/share/JetBrains/Toolbox/scripts"
 {{ end -}}
 

@@ -1,3 +1,6 @@
+# Use README's as documentation
+**/README.md
+
 {{ if ne .hostname "theStone" -}}
 # Explicitly whitelist non primary PC files
 **
@@ -26,12 +29,11 @@
 .config/gnucash/**
 .config/Typora/profile.json
 {{ end -}}
- 
- {{ if ne .chezmoi.os "linux" }}
+
+{{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/darwin/**
 {{ end }}
- 

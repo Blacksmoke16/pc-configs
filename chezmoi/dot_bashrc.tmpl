@@ -34,7 +34,9 @@ alias pbcopy='wl-copy'
 alias aconfmgr='aconfmgr -c $GIT_DIR/pc-configs/aconfmgr'
 
 # Make the shell aware of the GPG agent
-export GPG_TTY="$(tty)"
+# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 {{ end -}}
 
 # Place to put stuff local to a specific machine not worth sharing
