@@ -1,7 +1,7 @@
 # Use README's as documentation
 **/README.md
 
-{{ if ne .hostname "theStone" -}}
+{{ if .primary -}}
 # Explicitly whitelist non primary PC files
 **
 

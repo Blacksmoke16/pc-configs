@@ -22,7 +22,7 @@ if [ -d $GIT_DIR/crystal ]; then
     alias ccrystal=$GIT_DIR/crystal/bin/crystal
 fi
 
-{{ if eq .hostname "theStone" -}}
+{{ if .primary -}}
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 alias bw-lock='bw lock && unset BW_SESSION'
 alias services='sudo systemctl --type=service --state=running'
