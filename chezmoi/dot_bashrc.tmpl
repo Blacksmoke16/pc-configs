@@ -22,9 +22,12 @@ if [ -d $GIT_DIR/crystal ]; then
     alias ccrystal=$GIT_DIR/crystal/bin/crystal
 fi
 
-{{ if .primary -}}
+{{ if .personal -}}
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 alias bw-lock='bw lock && unset BW_SESSION'
+{{ end -}}
+
+{{ if .primary -}}
 alias services='sudo systemctl --type=service --state=running'
 alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
 alias update-prices="gnucash-cli --quotes=get $XDG_DATA_HOME/gnucash/books/george.gnucash"
