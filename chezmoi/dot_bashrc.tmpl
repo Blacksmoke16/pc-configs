@@ -2,6 +2,25 @@
 # ~/.bashrc
 #
 
+# FUNCTIONS
+
+# https://dmitryfrank.com/articles/shell_shortcuts
+function bm()
+{
+  BOOKMARKS=$(cat $XDG_DATA_HOME/bookmarks | sed 's/#.*//g' | sed '/^\s*$/d')
+
+  if [ -n "$1" ]
+  then
+    BOOKMARK=$(fzf --select-1 --query="$1" <<< $BOOKMARKS)
+  else
+    BOOKMARK=$(fzf <<< $BOOKMARKS)
+  fi
+
+  if [ -n "$BOOKMARK" ]; then
+    cd "$BOOKMARK"
+  fi
+}
+
 # Define var for other scripts to reference
 GIT_DIR="{{ .git.dir }}"
 

@@ -51,6 +51,7 @@
 [alias]
     co = checkout
     cm = commit --all --message
+    cmp = "!f() { git commit --all --message \"$@\" && git push; }; f"
     df = diff HEAD
     st = status -sb
     fo = fetch origin

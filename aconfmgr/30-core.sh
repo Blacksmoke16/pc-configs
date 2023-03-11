@@ -21,7 +21,7 @@ AddPackage reflector # A Python 3 module and script to retrieve and filter the l
 #
 
 # config managers
-AddPackage --foreign aconfmgr-git 
+AddPackage --foreign aconfmgr-git
 AddPackage chezmoi
 
 AddPackage fakeroot # Required by yay
@@ -36,6 +36,7 @@ AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage bashtop # Linux resource monitor
 AddPackage lf # A terminal file manager inspired by ranger
+AddPackage fzf # Command-line fuzzy finder
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage diff-so-fancy # Good-looking diffs with diff-highlight and more
 
