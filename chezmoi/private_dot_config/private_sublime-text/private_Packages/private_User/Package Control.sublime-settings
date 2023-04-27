@@ -3,11 +3,13 @@
   "in_process_packages": [],
   "installed_packages": [
     "Crystal",
+    "Dockerfile Syntax Highlighting",
     "EditorConfig",
     "INI",
     "Package Control",
     "Pretty JSON",
     "SingleTrailingNewLine",
+    "Terraform",
     "TOML"
   ]
 }
