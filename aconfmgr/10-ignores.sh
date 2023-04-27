@@ -98,7 +98,11 @@ IgnorePath '/usr/lib/modules/*-arch*'
 # Docker
 IgnorePath '/etc/docker/key.json' # https://stackoverflow.com/questions/47573820/what-is-etc-docker-key-json
 IgnorePath '/opt/containerd/*'
+IgnorePath '/var/lib/containerd/*'
 IgnorePath '/var/lib/docker/*'
+IgnorePath '/etc/credstore'
+IgnorePath '/etc/credstore.encrypted'
+IgnorePath '/etc/cni/*'
 
 # Java
 IgnorePath '/usr/lib/jvm/*'

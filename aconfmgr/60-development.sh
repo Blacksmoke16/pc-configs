@@ -12,6 +12,7 @@ AddPackage --foreign xxd-standalone # Hexdump utility from vim
 # Docker
 AddPackage docker # Pack, ship and run any application as a lightweight container
 AddPackage docker-compose # Fast, isolated development environments using Docker
+CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service
 
 # Build dependencies
 AddPackage pkgconf # Package compiler and linker metadata toolkit
