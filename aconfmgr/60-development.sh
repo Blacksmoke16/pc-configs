@@ -10,13 +10,12 @@ AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign xxd-standalone # Hexdump utility from vim
 
 # Docker
-AddPackage docker
-AddPackage docker-compose
+AddPackage docker # Pack, ship and run any application as a lightweight container
+AddPackage docker-compose # Fast, isolated development environments using Docker
 
 # Build dependencies
 AddPackage pkgconf # Package compiler and linker metadata toolkit
 AddPackage make # GNU make utility to maintain groups of programs
-AddPackage python # Next generation of the python high-level scripting language
 
 # Crystal
 AddPackage clang # C language family frontend for LLVM

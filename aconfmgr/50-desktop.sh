@@ -65,4 +65,4 @@ AddPackage steam # Valve's digital software delivery system
 AddPackage lib32-systemd # system and service manager (32-bit)
 
 # Minecraft
-AddPackage --foreign ftba # Offers many different styles of Minecraft modpacks to the community.
+# AddPackage --foreign ftba # Offers many different styles of Minecraft modpacks to the community.

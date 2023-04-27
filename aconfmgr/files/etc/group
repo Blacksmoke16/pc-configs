@@ -55,3 +55,4 @@ docker:x:971:
 nvidia-persistenced:x:143:
 cups:x:209:
 saned:x:970:
+dnsmasq:x:969:
