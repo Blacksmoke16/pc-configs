@@ -1,7 +1,6 @@
 # General
 AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, markup and prose
 AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
-AddPackage github-cli # The GitHub CLI
 AddPackage watchexec # Executes commands in response to file modifications
 AddPackage --foreign typora # A minimal markdown editor and reader.
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools

@@ -1,5 +1,13 @@
-# Single tab complete word and show possible completions
-set show-all-if-ambiguous on
+$include /etc/inputrc
+
+# Single tab complete word
+set show-all-if-unmodified On
+
+# Partially complete word and show completions if ambiguous
+set show-all-if-ambiguous On
+
+# Ignore case
+set completion-ignore-case On
 
 # Color files by types
 set colored-stats On
