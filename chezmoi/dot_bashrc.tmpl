@@ -2,8 +2,27 @@
 # ~/.bashrc
 #
 
+# FUNCTIONS
+
+# https://dmitryfrank.com/articles/shell_shortcuts
+function bm()
+{
+  BOOKMARKS=$(cat $XDG_DATA_HOME/bookmarks | sed 's/#.*//g' | sed '/^\s*$/d')
+
+  if [ -n "$1" ]
+  then
+    BOOKMARK=$(fzf --select-1 --query="$1" <<< $BOOKMARKS)
+  else
+    BOOKMARK=$(fzf <<< $BOOKMARKS)
+  fi
+
+  if [ -n "$BOOKMARK" ]; then
+    cd "$BOOKMARK"
+  fi
+}
+
 # Define var for other scripts to reference
-GIT_DIR="{{ .chezmoi.homeDir }}/{{ .git.dir }}"
+GIT_DIR="{{ .git.dir }}"
 
 # ALIASES
 
@@ -14,43 +33,33 @@ alias ls='ls -F --color=auto'
 alias l='ls -lah'
 alias df='df -h'
 alias du='du -sh'
-
-{{ if eq .chezmoi.os "linux"  -}}
-alias pbcopy='wl-copy'
-{{ end -}}
+alias trash='trash-put'
+alias cr='crystal'
+alias ss='sha256sum'
 
 if [ -d $GIT_DIR/crystal ]; then
     alias ccrystal=$GIT_DIR/crystal/bin/crystal
 fi
 
+{{ if .personal -}}
+alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
+alias bw-lock='bw lock && unset BW_SESSION'
+{{ end -}}
+
+{{ if .primary -}}
 alias services='sudo systemctl --type=service --state=running'
-
-alias cr='crystal'
-alias wcr='nodemon --exec crystal run --watch src'
-alias wcrt='nodemon --exec crystal run --watch test.cr test.cr'
-
-alias wcr-spec='nodemon --ext '*' -I --exec crystal spec --watch spec --watch src -- --order=random'
-alias ss='sha256sum'
 alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
-alias update-prices="gnucash-cli --quotes=get $XDG_DATA_HOME/gnucash/books/george.gnucash"
+alias update-prices="gnucash-cli --quotes=get -- $XDG_DATA_HOME/gnucash/books/george.gnucash"
+alias pbcopy='wl-copy'
 
 # Force aconfmgr to not use $XDG_CONFIG_HOME
 alias aconfmgr='aconfmgr -c $GIT_DIR/pc-configs/aconfmgr'
 
-# FUNCTIONS
-
-# $1 - file to encrypt
-function encrypt() {
-  gpg --output "$1.gpg" --symmetric $1;
-}
-
-# $1 - file to decrypt
-function decrypt() {
-  gpg --output "$1.decrypted" --decrypt $1;
-}
-
 # Make the shell aware of the GPG agent
-export GPG_TTY="$(tty)"
+# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+{{ end -}}
 
 # Place to put stuff local to a specific machine not worth sharing
 if [ -r "$HOME/.bashrc.local" ]; then

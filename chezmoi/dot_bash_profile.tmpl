@@ -2,46 +2,18 @@
 # ~/.bash_profile
 #
 
-# Utility functions
-
-exists() {
-    test -x "$(command -v "$1")"
-}
-
-# Configure $EDITOR and $VISUAL
-export EDITOR=nano
-exists subl && EDITOR=subl || 
-	{ exists vim && EDITOR=vim; } || 
-	{ exists vi && EDITOR=vi; }
-
-export VISUAL=subl
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Hardware cursors not yet working on wlroots
-export WLR_NO_HARDWARE_CURSORS=1
-
-# Set WLRoots renderer to Vulkan to avoid flickering
-#export WLR_RENDERER=vulkan
-
-# General wayland environment variables
-export XDG_SESSION_TYPE=wayland
-export QT_QPA_PLATFORM=wayland
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-
-# OpenGL Variables
-export GBM_BACKEND=nvidia-drm
-export __GL_GSYNC_ALLOWED=0
-export __GL_VRR_ALLOWED=0
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
+# Configure $EDITOR and $VISUAL
+export EDITOR=nano
+export VISUAL=subl
 
 # Setup application related ENV vars
 export PAGER=less
-export LESS='-R -M'
+export LESS='-RMF --mouse'
 export LESSHISTFILE='-' # Disable the ~/.lesshst file
 export GREP_COLORS='mt=38;5;196'
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 export GTK_THEME='Breeze-Dark'
 
 # Setup dev related ENV vars
@@ -49,10 +21,12 @@ export CC=clang
 export CXX=clang
 
 # Explicitly configure XDG vars just to have them
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_BIN_HOME="$HOME/.local/bin"
+export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_RUNTIME_DIR="/run/user/${UID}"
 
 # Configure non XDG compliant apps
 # https://wiki.archlinux.org/title/XDG_Base_Directory#Support
@@ -65,11 +39,20 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
 # Custom PATH
 PATH="$HOME/.local/bin/:$PATH"
-export PATH="$PATH:/home/george/.local/share/JetBrains/Toolbox/scripts"
 
 # Place to put stuff local to a specific machine not worth sharing
 if [ -r "$HOME/.bash_profile.local" ]; then
     . "$HOME/.bash_profile.local"
 fi
+
+{{ if .primary -}}
+# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+
+export PATH="$PATH:/home/george/.local/share/JetBrains/Toolbox/scripts"
+{{ end -}}
 
 [ "$BASH_VERSION" -a -z "$POSIXLY_CORRECT" ] && . "$HOME/.bashrc"

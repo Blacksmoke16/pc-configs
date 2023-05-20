@@ -51,7 +51,8 @@ avahi:x:972:
 polkitd:x:102:
 rtkit:x:133:
 usbmux:x:140:
-docker:x:971:
+docker:x:971:george
 nvidia-persistenced:x:143:
 cups:x:209:
 saned:x:970:
+dnsmasq:x:969:

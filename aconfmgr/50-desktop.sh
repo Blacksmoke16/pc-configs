@@ -12,7 +12,6 @@ AddPackage sway # Tiling Wayland compositor and replacement for the i3 window ma
 AddPackage swayidle # Idle management daemon for Wayland
 AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
 AddPackage wofi # launcher for wlroots-based wayland compositors
-AddPackage xorg-xwayland # run X clients under wayland
 
 # Themes
 AddPackage breeze-gtk
@@ -26,7 +25,7 @@ AddPackage --foreign clipman # A simple clipboard manager for Wayland
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Core
-AddPackage discord # All-in-one voice and text chat for gamers that's free and secure.
+AddPackage --foreign armcord-bin # Discord client for lower end and ARM devices.
 AddPackage --foreign google-chrome # The popular and trusted web browser by Google (Stable Channel)
 
 # Printing
@@ -47,12 +46,17 @@ CopyFile /etc/sane.d/dll.conf
 AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
 # sudo brsaneconfig4 -a name="color" model="mfc-j835dw" ip=192.168.1.31
 CopyFile /opt/brother/scanner/brscan4/brsanenetdevice4.cfg
+AddPackage simple-scan # Simple scanning utility
 
 # Gnucash
 AddPackage gnucash # Personal and small-business financial-accounting application
 AddPackage libdbi-drivers # Database drivers for libdbi (MySQL, PostgreSQL, and SQLite)
 AddPackage perl-date-manip # Date::Manip - date manipulation routines
 AddPackage perl-finance-quote # Perl/CPAN Module Finance::Quote : Fetch stock prices over the Internet
+AddPackage perl-readonly # Companion module for Readonly.pm, to speed up read-only
+AddPackage --foreign perl-web-scraper # Web Scraping Toolkit using HTML and CSS Selectors or XPath expressions
+AddPackage --foreign perl-spreadsheet-xlsx # Perl extension for reading MS Excel 2007 files
+AddPackage --foreign perl-html-tokeparser-simple # Easy to use HTML::TokeParser interface
 
 # Media
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
@@ -65,4 +69,6 @@ AddPackage steam # Valve's digital software delivery system
 AddPackage lib32-systemd # system and service manager (32-bit)
 
 # Minecraft
-AddPackage --foreign ftba # Offers many different styles of Minecraft modpacks to the community.
+AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
+AddPackage --foreign glfw-wayland-minecraft # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
+AddPackage qt5-wayland # Provides APIs for Wayland

@@ -1,8 +1,23 @@
+[color]
+    ui = true
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[color "diff"]
+    meta = 11
+    frag = magenta bold
+    func = 146 bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [core]
     autocrlf = input
     editor = nano
     warnAmbiguousRefs = true
-    pager = less -FRX
+    pager = diff-so-fancy | less --tabs=2 -RFX
 [branch]
     autosetuprebase = always
 [commit]
@@ -16,6 +31,8 @@
     autocorrect = prompt
 [init]
     defaultBranch = master
+[interactive]
+    diffFilter = diff-so-fancy --patch
 [merge]
     conflictStyle = zdiff3
 [pull]
@@ -27,15 +44,25 @@
 [tag]
     forceSignAnnotated = true
 [user]
-    name = {{ .git.name }}
-    email = {{ .git.email }}
+    name = {{ .name }}
+    email = {{ .email }}
     signingkey = 1E3D9616D23702FF
     useConfigOnly = true
 [alias]
     co = checkout
+    cm = commit --all --message
+    cmp = "!f() { git commit --all --message \"$@\" && git push; }; f"
+    df = diff HEAD
     st = status -sb
     fo = fetch origin
     po = !git pull origin $1
     fco = !git fo && git co $1 && git po $1
     latest = !git fo && git co master && git pull origin master
     update = !git fo && git merge origin/master
+    sync   = !git latest && git fetch upstream && git rebase upstream/master
+    unstage = reset --quiet
+
+{{ if eq .chezmoi.os "darwin" -}}
+[includeIf "gitdir:~/bsmoke/"]
+    path = ~/bsmoke/.gitconfig
+{{ end -}}

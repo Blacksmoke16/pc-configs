@@ -1,0 +1,12 @@
+{{ if .primary -}}
+#!/bin/bash
+
+set -e # -e: exit on error
+
+RENDERED_TEMPLATE=$(cat {{ joinPath .chezmoi.sourceDir "/private_dot_config/gnucash/settings.ini.tmpl" }} | chezmoi execute-template)
+
+# Only applicable to my main machine
+# gnucash-settings.ini hash: {{ include "private_dot_config/gnucash/settings.ini.tmpl" | sha256sum }}
+dconf reset -f /org/gnucash/
+dconf load /org/gnucash/ <<< $RENDERED_TEMPLATE
+{{ end -}}

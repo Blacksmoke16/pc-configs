@@ -1,0 +1,18 @@
+Include config.local
+
+Host *
+    AddKeysToAgent yes
+    IgnoreUnknown UseKeychain
+    IdentitiesOnly yes
+    UseKeychain yes
+Host github.com
+    IdentityFile ~/.ssh/github.ed25519.priv
+{{ if .primary -}}
+Host router
+    HostName 192.168.1.1
+    IdentityFile ~/.ssh/router.ed25519.priv
+    User george
+Host aur.archlinux.org
+    User aur
+    IdentityFile ~/.ssh/aur.ed25519.priv
+{{ end -}}

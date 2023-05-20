@@ -1,0 +1,21 @@
+{{ if .personal -}}
+#! /usr/bin/env bash
+
+set -e # -e: exit on error
+
+VERSION='2023.4.0'
+ARCHIVE_URL="https://github.com/bitwarden/clients/releases/download/cli-v${VERSION}/bw-macos-${VERSION}.zip"
+CHECKSUM_URL="https://github.com/bitwarden/clients/releases/download/cli-v${VERSION}/bw-macos-sha256-${VERSION}.txt"
+
+mkdir -p /tmp/chezmoi/packages/bw && cd $_
+
+curl -S -s -L -o bw.zip $ARCHIVE_URL
+curl -S -s -L -o bw.zip.sha256 $CHECKSUM_URL
+
+echo -n "$(cat bw.zip.sha256 | tr -d '\r')  bw.zip" | shasum --algorithm=256 --check --status || { echo "Checksum did not match!"; exit 1; }
+
+unzip -q -o bw.zip
+
+cp bw $HOME/.local/bin/bw
+chmod +x $HOME/.local/bin/bw
+{{ end -}}

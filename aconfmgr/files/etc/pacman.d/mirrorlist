@@ -3,18 +3,18 @@
 ################################################################################
 
 # With:       reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8
-# When:       2022-12-29 16:34:40 UTC
+# When:       2023-05-20 13:59:03 UTC
 # From:       https://archlinux.org/mirrors/status/json/
-# Retrieved:  2022-12-29 16:34:29 UTC
-# Last Check: 2022-12-29 16:30:19 UTC
+# Retrieved:  2023-05-20 13:58:53 UTC
+# Last Check: 2023-05-20 13:48:52 UTC
 
-Server = https://mirror.wdc1.us.leaseweb.net/archlinux/$repo/os/$arch
-Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch
-Server = https://forksystems.mm.fcix.net/archlinux/$repo/os/$arch
-Server = https://mirror.dal10.us.leaseweb.net/archlinux/$repo/os/$arch
-Server = https://arch.hu.fo/archlinux/$repo/os/$arch
-Server = https://mirror.selfnet.de/archlinux/$repo/os/$arch
-Server = https://lysakermoen.com/Software/Linux/Mirrors/ArchLinux/$repo/os/$arch
-Server = https://mirrors.janbruckner.de/archlinux/$repo/os/$arch
-Server = https://arch.yhtez.xyz/$repo/os/$arch
-Server = https://mirror.spaceint.fr/archlinux/$repo/os/$arch
+Server = https://mirror.osbeck.com/archlinux/$repo/os/$arch
+Server = https://mirror.lty.me/archlinux/$repo/os/$arch
+Server = https://mirror.ubrco.de/archlinux/$repo/os/$arch
+Server = https://mirrors.n-ix.net/archlinux/$repo/os/$arch
+Server = https://archlinux.mailtunnel.eu/$repo/os/$arch
+Server = https://gluttony.sin.cvut.cz/arch/$repo/os/$arch
+Server = https://mirror.kumi.systems/archlinux/$repo/os/$arch
+Server = https://mirror.dkm.cz/archlinux/$repo/os/$arch
+Server = https://mirror.cyberbits.eu/archlinux/$repo/os/$arch
+Server = https://mirror.srv.fail/archlinux/$repo/os/$arch

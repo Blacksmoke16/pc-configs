@@ -7,9 +7,12 @@ GIT_PS1_SHOWSTASHSTATE=1
 # Shows '%' if there are untracked files
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
+# Shows '|CONFLICT' if there are unresolved conflicts
+GIT_PS1_OMITSPARSESTATE='yes'
+
 GIT_PS1_SHOWCOLORHINTS=1
 
-GIT_PS1_SHOWUPSTREAM="verbose"
+GIT_PS1_SHOWUPSTREAM='verbose'
 
 __mkps1_debian_chroot() {
     # This string is intentionally single-quoted:

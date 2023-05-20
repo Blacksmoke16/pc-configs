@@ -36,7 +36,7 @@ exec swayidle -w \
 ### Input configuration
 
 input * xkb_numlock enable
- 
+
 ### Key bindings
 #
 # Basics:
@@ -103,6 +103,14 @@ bindsym Print exec grim -g "$(slurp -d)" -t png - | wl-copy -t image/png
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+f floating toggle
 
+    bindsym $mod+t layout tabbed
+    bindsym Ctrl+Alt+Right focus right
+    bindsym Ctrl+Alt+Left focus left
+    bindsym Ctrl+Alt+Up focus up
+    bindsym Ctrl+Alt+Down focus down
+
+    bindsym $mod+j fullscreen toggle
+
 #
 # Scratchpad:
 #
@@ -117,7 +125,7 @@ bar {
 # Start notification daemon
 #
 
-exec mako
+exec mako --history=1 --max-history=50
 exec wl-paste -t text --watch clipman store --no-persist
 
 include /etc/sway/config.d/*
