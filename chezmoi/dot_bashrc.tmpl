@@ -49,7 +49,7 @@ alias bw-lock='bw lock && unset BW_SESSION'
 {{ if .primary -}}
 alias services='sudo systemctl --type=service --state=running'
 alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
-alias update-prices="gnucash-cli --quotes=get $XDG_DATA_HOME/gnucash/books/george.gnucash"
+alias update-prices="gnucash-cli --quotes=get -- $XDG_DATA_HOME/gnucash/books/george.gnucash"
 alias pbcopy='wl-copy'
 
 # Force aconfmgr to not use $XDG_CONFIG_HOME

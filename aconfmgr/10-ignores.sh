@@ -113,4 +113,5 @@ IgnorePath '/etc/cups/subscriptions.conf' # Urg, https://github.com/apple/cups/i
 IgnorePath '/etc/cups/classes.conf' # https://www.cups.org/doc/man-classes.conf.html
 IgnorePath '/etc/cups/printers.conf.O' # https://askubuntu.com/a/1106572
 IgnorePath '/etc/cups/ppd/color.ppd.O' # https://askubuntu.com/a/1106572
+IgnorePath '/var/lib/colord/*'
 IgnorePath '/var/spool/*'
