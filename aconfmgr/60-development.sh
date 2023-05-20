@@ -1,5 +1,4 @@
 # General
-AddPackage which # A utility to show the full path of commands
 AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, markup and prose
 AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
 AddPackage github-cli # The GitHub CLI
@@ -15,8 +14,7 @@ AddPackage docker-compose # Fast, isolated development environments using Docker
 CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service
 
 # Build dependencies
-AddPackage pkgconf # Package compiler and linker metadata toolkit
-AddPackage make # GNU make utility to maintain groups of programs
+AddPackage base-devel # Basic tools to build Arch Linux packages
 
 # Crystal
 AddPackage clang # C language family frontend for LLVM

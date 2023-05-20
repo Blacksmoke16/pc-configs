@@ -70,7 +70,4 @@ AddPackage lib32-systemd # system and service manager (32-bit)
 
 # Minecraft
 AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
-
-# TODO: Remove this once it's added as a dep upstream
-AddPackage patch # A utility to apply patch files to original sources
 AddPackage --foreign glfw-wayland-minecraft # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
