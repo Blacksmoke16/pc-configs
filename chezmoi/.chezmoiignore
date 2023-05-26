@@ -19,6 +19,7 @@
 !.config/sublime-text/**
 !.config/Typora/**
 !.config/readline/**
+!.config/wezterm/**
 
 !.ssh/
 !.ssh/config
