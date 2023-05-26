@@ -11,6 +11,7 @@ AddPackage sway # Tiling Wayland compositor and replacement for the i3 window ma
 AddPackage swayidle # Idle management daemon for Wayland
 AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
 AddPackage wofi # launcher for wlroots-based wayland compositors
+AddPackage --foreign wlsunset # Day/night gamma adjustments for Wayland compositors
 
 # Themes
 AddPackage breeze-gtk
