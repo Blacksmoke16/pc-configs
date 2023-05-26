@@ -18,7 +18,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 output DP-3 pos 5120 0 res 2560x1440
 output DP-2 pos 2560 0 res 2560x1440
-output DP-1 pos 0 0 res 2560x1440
+output HDMI-A-1 pos 0 0 res 2560x1440
 
 workspace 3 output DP-1
 workspace 2 output DP-2
@@ -128,4 +128,4 @@ bar {
 exec mako --history=1 --max-history=50
 exec wl-paste -t text --watch clipman store --no-persist
 
-include /etc/sway/config.d/*
+xwayland disable

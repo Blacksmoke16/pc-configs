@@ -9,6 +9,7 @@ CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/sy
 
 # available shells
 AddPackage foot # Fast, lightweight, and minimalistic Wayland terminal emulator
+AddPackage wezterm
 CopyFile /etc/shells
 CopyFile /etc/inputrc
 

@@ -1,10 +1,9 @@
 # GPU
-AddPackage nvidia # NVIDIA drivers for linux
-AddPackage lib32-nvidia-utils # NVIDIA drivers utilities (32-bit)
 AddPackage vulkan-validation-layers # Vulkan Validation Layers
-CopyFile /etc/pacman.d/hooks/nvidia.hook
-CreateLink /etc/systemd/system/systemd-hibernate.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
-CreateLink /etc/systemd/system/systemd-suspend.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
+AddPackage mesa # An open-source implementation of the OpenGL specification
+AddPackage vulkan-radeon # Radeon's Vulkan mesa driver
+AddPackage lib32-vulkan-radeon # Radeon's Vulkan mesa driver (32-bit)
+AddPackage libva-mesa-driver # VA-API drivers
 
 # Sway & friends
 AddPackage mako # Lightweight notification daemon for Wayland

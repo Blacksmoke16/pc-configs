@@ -11,7 +11,7 @@ map x cut
 map <c-k> clear
 map h set hidden!
 
-cmd trash %trash-put $fx
+cmd trash %trash-put "$fx"
 map <delete> trash
 
 # extract the current file with the right command
@@ -31,5 +31,5 @@ cmd extract ${{
 map e extract
 
 cmd chezmoi-add ${{
-    chezmoi add $f
+    chezmoi add "$f"
 }}
