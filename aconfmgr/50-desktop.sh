@@ -13,6 +13,9 @@ AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based c
 AddPackage wofi # launcher for wlroots-based wayland compositors
 AddPackage --foreign wlsunset # Day/night gamma adjustments for Wayland compositors
 
+# TODO: Remove this once https://youtrack.jetbrains.com/issue/JBR-3206 is resolved.
+AddPackage xorg-xwayland # run X clients under wayland
+
 # Themes
 AddPackage breeze-gtk
 
@@ -40,6 +43,7 @@ function PrinterConfFilter() {
 }
 AddFileContentFilter '/etc/cups/printers.conf' PrinterConfFilter
 CopyFile /etc/cups/printers.conf 600
+SetFileProperty /etc/cups/printers.conf group root
 AddPackage sane # Scanner Access Now Easy
 CopyFile /etc/sane.d/net.conf
 CopyFile /etc/sane.d/dll.conf

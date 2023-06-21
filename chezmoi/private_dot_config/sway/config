@@ -122,4 +122,5 @@ exec mako --history=1 --max-history=50
 exec wl-paste -t text --watch clipman store --no-persist
 exec wlsunset -l 40.7 -L -80.3 -t 4000
 
-xwayland disable
+# TODO: Uncomment this once https://youtrack.jetbrains.com/issue/JBR-3206 is resolved.
+# xwayland disable

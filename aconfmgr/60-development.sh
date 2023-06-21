@@ -22,6 +22,9 @@ AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
 AddPackage --foreign oq-bin
 
+# Node
+AddPackage --foreign nvm
+
 # PHP
 # AddPackage php # A general-purpose scripting language that is especially suited to web development
 # AddPackage composer # Dependency Manager for PHP
