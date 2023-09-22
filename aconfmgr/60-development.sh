@@ -28,8 +28,8 @@ AddPackage --foreign oq-bin
 # AddPackage --foreign nvm
 
 # PHP
-AddPackage php # A general-purpose scripting language that is especially suited to web development
-AddPackage composer # Dependency Manager for PHP
+# AddPackage php # A general-purpose scripting language that is especially suited to web development
+# AddPackage composer # Dependency Manager for PHP
 # AddPackage --foreign symfony-cli-bin # The Symfony client helps developers create and manage Symfony applications.
 
 # PHP Dev

@@ -14,21 +14,4 @@ config.colors = {
   scrollbar_thumb = '#b9b9b9',
 }
 
-local function get_current_working_dir(tab)
-  local current_dir = tab.active_pane.current_working_dir
-  local HOME_DIR = string.format("file://%s", os.getenv("HOME"))
-
-  return current_dir == HOME_DIR and "." or string.gsub(current_dir, "(.*[/\\])(.*)", "%2")
-end
-
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-  local title = string.format(" %s  %s ~ %s  ", "❯", get_current_working_dir(tab))
-
-
-  return {
-      { Text = title },
-  }
-end)
-
-
 return config
