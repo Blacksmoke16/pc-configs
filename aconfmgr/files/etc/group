@@ -56,3 +56,6 @@ nvidia-persistenced:x:143:
 cups:x:209:
 saned:x:970:
 dnsmasq:x:969:
+colord:x:967:
+systemd-journal-upload:x:966:
+named:x:40:

@@ -6,6 +6,8 @@ AddPackage --foreign typora # A minimal markdown editor and reader.
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign xxd-standalone # Hexdump utility from vim
+AddPackage bind # A complete, highly portable implementation of the DNS protocol
+AddPackage less # A terminal based program for viewing text files
 
 # Docker
 AddPackage docker # Pack, ship and run any application as a lightweight container
@@ -23,11 +25,11 @@ AddPackage shards # The package manager for the Crystal language
 AddPackage --foreign oq-bin
 
 # Node
-AddPackage --foreign nvm
+# AddPackage --foreign nvm
 
 # PHP
-# AddPackage php # A general-purpose scripting language that is especially suited to web development
-# AddPackage composer # Dependency Manager for PHP
+AddPackage php # A general-purpose scripting language that is especially suited to web development
+AddPackage composer # Dependency Manager for PHP
 # AddPackage --foreign symfony-cli-bin # The Symfony client helps developers create and manage Symfony applications.
 
 # PHP Dev

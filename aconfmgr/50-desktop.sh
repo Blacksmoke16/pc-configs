@@ -9,6 +9,7 @@ AddPackage libva-mesa-driver # VA-API drivers
 AddPackage mako # Lightweight notification daemon for Wayland
 AddPackage sway # Tiling Wayland compositor and replacement for the i3 window manager
 AddPackage swayidle # Idle management daemon for Wayland
+AddPackage swaylock # Screen locker for Wayland
 AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
 AddPackage wofi # launcher for wlroots-based wayland compositors
 AddPackage --foreign wlsunset # Day/night gamma adjustments for Wayland compositors
@@ -22,6 +23,7 @@ AddPackage breeze-gtk
 # Screenshot
 AddPackage slurp # Select a region in a Wayland compositor
 AddPackage grim # Screenshot utility for Wayland
+AddPackage wf-recorder # Screen recorder for wlroots-based compositors such as sway
 
 # Clipboard
 AddPackage --foreign clipman # A simple clipboard manager for Wayland
@@ -76,3 +78,4 @@ AddPackage lib32-systemd # system and service manager (32-bit)
 AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
 AddPackage --foreign glfw-wayland-minecraft # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 AddPackage qt5-wayland # Provides APIs for Wayland
+AddPackage jdk17-openjdk # OpenJDK Java 17 development kit
