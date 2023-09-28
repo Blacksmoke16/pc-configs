@@ -54,6 +54,7 @@
     cmp = "!f() { git commit --all --message \"$@\" && git push; }; f"
     df = diff HEAD
     st = status -sb
+    fixup = "!git log -n 15 --pretty=format:'%h %s' --no-merges | fzf | cut -c -10 | xargs -o git commit --fixup"
     fo = fetch origin
     po = !git pull origin $1
     fco = !git fo && git co $1 && git po $1
