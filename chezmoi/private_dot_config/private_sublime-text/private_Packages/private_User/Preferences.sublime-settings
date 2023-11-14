@@ -34,7 +34,10 @@
     "Valdiator",
     "Validatable",
     "Variadic",
-    "variadic"
+    "formatter",
+    "testability",
+    "serializer",
+    "variadic",
   ],
   "show_rel_path": true,
   "font_face": "Roboto Mono",

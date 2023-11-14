@@ -10,6 +10,6 @@
     "Pretty JSON",
     "SingleTrailingNewLine",
     "Terraform",
-    "TOML"
+    "TOML",
   ]
 }
