@@ -66,6 +66,11 @@ if [ -r "$HOME/.bashrc.local" ]; then
     . "$HOME/.bashrc.local"
 fi
 
+# Source NVM files if the init script exists
+if [ -r "/usr/share/nvm/init-nvm.sh" ]; then
+    . "/usr/share/nvm/init-nvm.sh"
+fi
+
 . $XDG_DATA_HOME/scripts/git-prompt.sh
 . $XDG_DATA_HOME/scripts/ps1.sh
 
