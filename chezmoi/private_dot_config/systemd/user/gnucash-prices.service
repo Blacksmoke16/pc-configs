@@ -1,0 +1,11 @@
+[Unit]
+Description=Update Gnucash price DB
+After=network.target
+Requires=gnucash-prices.timer
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '/usr/bin/gnucash-cli --quotes=get -- /home/george/.local/share/gnucash/books/george.gnucash'
+
+[Install]
+WantedBy=multi-user.target

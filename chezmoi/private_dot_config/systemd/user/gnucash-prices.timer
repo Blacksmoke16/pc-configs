@@ -1,0 +1,10 @@
+[Unit]
+Description=Update Gnucash price DB nightly
+Requires=gnucash-prices.service
+
+[Timer]
+Unit=gnucash-prices.service
+OnCalendar=*-*-* 1:00:00 UTC
+
+[Install]
+WantedBy=timers.target
