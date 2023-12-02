@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=ArmCord
-Comment=Discord client for lower end ARM devices.
-Exec=armcord --enable-features=UseOzonePlatform --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto --ozone-platform=wayland
-Icon=armcord
-Categories=Internet;

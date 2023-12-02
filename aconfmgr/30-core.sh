@@ -35,6 +35,7 @@ AddPackage openssh # Premier connectivity tool for remote login with the SSH pro
 AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage btop # A monitor of system resources, bpytop ported to C++
+AddPackage rocm-smi-lib # ROCm System Management Interface Library
 AddPackage lf # A terminal file manager inspired by ranger
 AddPackage fzf # Command-line fuzzy finder
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
