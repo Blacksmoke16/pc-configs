@@ -57,13 +57,7 @@ AddPackage simple-scan # Simple scanning utility
 # Gnucash
 AddPackage gnucash # Personal and small-business financial-accounting application
 AddPackage libdbi-drivers # Database drivers for libdbi (MySQL, PostgreSQL, and SQLite)
-AddPackage perl-date-manip # Date::Manip - date manipulation routines
 AddPackage perl-finance-quote # Perl/CPAN Module Finance::Quote : Fetch stock prices over the Internet
-AddPackage perl-readonly # Companion module for Readonly.pm, to speed up read-only
-AddPackage perl-io-string # IO::File interface for in-core strings
-AddPackage --foreign perl-web-scraper # Web Scraping Toolkit using HTML and CSS Selectors or XPath expressions
-AddPackage --foreign perl-spreadsheet-xlsx # Perl extension for reading MS Excel 2007 files
-AddPackage --foreign perl-html-tokeparser-simple # Easy to use HTML::TokeParser interface
 
 # Media
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
