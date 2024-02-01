@@ -1,6 +1,7 @@
 {
   "bootstrapped": true,
-  "in_process_packages": [],
+  "in_process_packages": [
+  ],
   "installed_packages": [
     "Crystal",
     "Dockerfile Syntax Highlighting",
@@ -11,5 +12,5 @@
     "SingleTrailingNewLine",
     "Terraform",
     "TOML",
-  ]
+  ],
 }
