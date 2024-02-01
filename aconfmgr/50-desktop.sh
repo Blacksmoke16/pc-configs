@@ -12,7 +12,7 @@ AddPackage swayidle # Idle management daemon for Wayland
 AddPackage swaylock # Screen locker for Wayland
 AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors
 AddPackage wofi # launcher for wlroots-based wayland compositors
-AddPackage --foreign wlsunset # Day/night gamma adjustments for Wayland compositors
+AddPackage wlsunset # Day/night gamma adjustments for Wayland compositors
 
 # TODO: Remove this once https://youtrack.jetbrains.com/issue/JBR-3206 is resolved.
 AddPackage xorg-xwayland # run X clients under wayland
@@ -57,7 +57,7 @@ AddPackage simple-scan # Simple scanning utility
 # Gnucash
 AddPackage gnucash # Personal and small-business financial-accounting application
 AddPackage libdbi-drivers # Database drivers for libdbi (MySQL, PostgreSQL, and SQLite)
-AddPackage perl-finance-quote # Perl/CPAN Module Finance::Quote : Fetch stock prices over the Internet
+AddPackage --foreign perl-finance-quote # Perl/CPAN Module Finance::Quote : Fetch stock prices over the Internet
 
 # Media
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
