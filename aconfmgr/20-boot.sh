@@ -15,7 +15,6 @@ SetFileProperty /usr/bin/newuidmap mode ''
 # filesytem
 CopyFile /etc/fstab
 CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer
-CopyFile /etc/sysctl.d/99-swappiness.conf
 
 # systemd-boot
 CopyFile /boot/loader/entries.srel 755 # https://systemd.io/BOOT_LOADER_SPECIFICATION/#standard-conformance-marker-file
