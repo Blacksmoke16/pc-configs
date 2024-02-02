@@ -12,9 +12,12 @@ IgnorePath '/etc/udev/hwdb.bin'
 IgnorePath '/usr/lib/udev/hwdb.bin'
 
 # systemd
+IgnorePath '/etc/vconsole.conf'
 IgnorePath '/var/lib/systemd/catalog/database'
 IgnorePath '/var/lib/systemd/random-seed'
 IgnorePath '/var/lib/systemd/coredump*'
+IgnorePath '/var/lib/systemd/rfkill/*'
+IgnorePath '/var/lib/systemd/ephemeral-trees/*'
 IgnorePath '/var/tmp/systemd-private-*'
 
 # systemd-boot
@@ -53,8 +56,9 @@ IgnorePath '/usr/lib/locale/locale-archive'
 
 # GTK
 IgnorePath '/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache'
-IgnorePath '/usr/lib/gtk-3.0/3.0.0/immodules.cache'
 IgnorePath '/usr/lib/gtk-2.0/2.10.0/immodules.cache'
+IgnorePath '/usr/lib/gtk-3.0/3.0.0/immodules.cache'
+IgnorePath '/usr/lib/gtk-4.0/4.0.0/*'
 IgnorePath '/usr/lib/gio/modules/giomodule.cache'
 
 # certificates
@@ -115,3 +119,9 @@ IgnorePath '/etc/cups/printers.conf.O' # https://askubuntu.com/a/1106572
 IgnorePath '/etc/cups/ppd/color.ppd.O' # https://askubuntu.com/a/1106572
 IgnorePath '/var/lib/colord/*'
 IgnorePath '/var/spool/*'
+
+# upower
+IgnorePath '/var/lib/upower/*'
+
+# Misc
+IgnorePath '/data/*'

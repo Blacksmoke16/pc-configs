@@ -1,14 +1,11 @@
-# /dev/nvme0n1p3
-UUID=025be0d6-6485-4790-be59-531b53b0b467	/         	ext4      	rw,relatime,noatime	0 1
+# /dev/nvmeXn1p2
+UUID=44293a6e-5ee7-4608-ac58-6fe50f7f744a	/         	ext4      	rw,relatime,noatime	0 1
 
-# /dev/nvme0n1p1
-UUID=D205-C64D      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+# /dev/nvmeXn1p1
+UUID=C824-09C6      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
-# /dev/nvme0n1p4
-UUID=ad768646-0110-45bb-81d6-bcd7341be38c	/home     	ext4      	rw,relatime,noatime	0 2
+# /dev/nvmeXn1p3
+UUID=fb135fa3-2296-44b6-85a4-ea006594d5e9	/home     	ext4      	rw,relatime,noatime	0 2
 
-# /dev/nvme0n1p2
-UUID=9870626c-c6d9-4523-89cf-9ea03044b1eb	none      	swap      	defaults  	0 0
-
-UUID=f91c894a-780e-415f-b5f3-f94dc0dc431d /mnt/secondary ext4 rw,relatime,noatime,noauto,x-systemd.automount 0 2
-UUID=856a3591-b098-42eb-b027-539a18b307fe /mnt/archive ext4 rw,relatime,noatime,noauto,x-systemd.automount,x-systemd.idle-timeout=1min 0 2
+# /dev/nvmeXn1p4
+UUID=50edcc49-e895-4068-9116-ad4e00b95511 /data ext4 rw,relatime,noatime,noauto,x-systemd.automount,x-systemd.idle-timeout=1min 0 2

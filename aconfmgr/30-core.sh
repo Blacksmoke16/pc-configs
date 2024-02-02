@@ -58,6 +58,7 @@ CreateFile /var/lib/systemd/timers/stamp-fstrim.timer > /dev/null
 CreateFile /var/lib/systemd/timers/stamp-shadow.timer > /dev/null
 CreateLink /etc/systemd/system/multi-user.target.wants/remote-fs.target /usr/lib/systemd/system/remote-fs.target
 CreateLink /etc/systemd/user/sockets.target.wants/p11-kit-server.socket /usr/lib/systemd/user/p11-kit-server.socket
+CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
 
 # enable systemd-timesyncd
 CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service

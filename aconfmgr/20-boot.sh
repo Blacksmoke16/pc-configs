@@ -24,6 +24,7 @@ CopyFile /boot/loader/loader.conf 755
 CopyFile /etc/machine-id 444
 CreateLink /var/lib/dbus/machine-id /etc/machine-id
 CreateDir /boot/System\ Volume\ Information
+CreateDir /boot/EFI/Linux
 
 # initramfs
 CreateLink /etc/os-release ../usr/lib/os-release
