@@ -7,6 +7,10 @@ IgnorePath '/etc/gshadow*'
 IgnorePath '/var/db/sudo/lectured/*'
 IgnorePath '/var/db/nscd/*'
 
+# files with dynamically set permissions
+IgnorePath '/usr/bin/groupmems'
+IgnorePath '/usr/lib/utempter/*'
+
 # udev
 IgnorePath '/etc/udev/hwdb.bin'
 IgnorePath '/usr/lib/udev/hwdb.bin'
@@ -17,7 +21,7 @@ IgnorePath '/var/lib/systemd/catalog/database'
 IgnorePath '/var/lib/systemd/random-seed'
 IgnorePath '/var/lib/systemd/coredump*'
 IgnorePath '/var/lib/systemd/rfkill/*'
-IgnorePath '/var/lib/systemd/ephemeral-trees/*'
+IgnorePath '/var/lib/systemd/ephemeral-trees'
 IgnorePath '/var/tmp/systemd-private-*'
 
 # systemd-boot
