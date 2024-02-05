@@ -60,3 +60,4 @@ wheel:x:998:
 adm:x:999:daemon
 george:x:1000:
 nobody:x:65534:
+openvpn:x:964:

@@ -127,5 +127,11 @@ IgnorePath '/var/spool/*'
 # upower
 IgnorePath '/var/lib/upower/*'
 
+# openvpn
+IgnorePath '/etc/openvpn/*'
+
+# Polkit
+IgnorePath '/usr/share/polkit-1/rules.d/*'
+
 # Misc
 IgnorePath '/data/*'

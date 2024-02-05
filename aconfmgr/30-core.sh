@@ -40,6 +40,8 @@ AddPackage lf # A terminal file manager inspired by ranger
 AddPackage fzf # Command-line fuzzy finder
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage diff-so-fancy # Good-looking diffs with diff-highlight and more
+AddPackage openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
+AddPackage --foreign openvpn-update-systemd-resolved # OpenVPN systemd-resolved Updater
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket
