@@ -133,5 +133,8 @@ IgnorePath '/etc/openvpn/*'
 # Polkit
 IgnorePath '/usr/share/polkit-1/rules.d/*'
 
+# colord
+IgnorePath '/etc/colord/*'
+
 # Misc
 IgnorePath '/data/*'

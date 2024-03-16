@@ -54,10 +54,11 @@ AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
 CopyFile /opt/brother/scanner/brscan4/brsanenetdevice4.cfg
 AddPackage simple-scan # Simple scanning utility
 
-# Gnucash
+# Finance
 AddPackage gnucash # Personal and small-business financial-accounting application
 AddPackage libdbi-drivers # Database drivers for libdbi (MySQL, PostgreSQL, and SQLite)
 AddPackage --foreign perl-finance-quote # Perl/CPAN Module Finance::Quote : Fetch stock prices over the Internet
+CopyFile /etc/udev/rules.d/51-trezor.rules
 
 # Media
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
