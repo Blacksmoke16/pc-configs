@@ -74,5 +74,4 @@ AddPackage lib32-systemd # system and service manager (32-bit)
 # AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
 # AddPackage --foreign glfw-wayland-minecraft # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 # AddPackage qt5-wayland # Provides APIs for Wayland
-# AddPackage jdk8-openjdk # OpenJDK Java 17 development kit
-# AddPackage jdk17-openjdk # OpenJDK Java 17 development kit
+# AddPackage jdk8-openjdk # OpenJDK Java 8 development kit (needed for E6E)

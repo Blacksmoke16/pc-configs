@@ -39,7 +39,7 @@ alias ss='sha256sum'
 
 if [ -d $GIT_DIR/crystal ]; then
     alias ccrystal=$GIT_DIR/crystal/bin/crystal
-    alias wcr='watchexec --signal=TERM --emit-events-to=none --clear -- crystal run $1'
+    alias wcr='watchexec --signal=TERM --watch=src/ --watch=spec/ --emit-events-to=none --clear -- crystal $1'
 fi
 
 {{ if .personal -}}
