@@ -29,6 +29,7 @@ AddPackage fakeroot # Required by yay
 AddPackage noto-fonts # Google Noto TTF fonts
 AddPackage --foreign noto-fonts-sc # Noto CJK-SC fonts for Simplified Chinese
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
+AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popular 'iconic fonts' (monospace)
 AddPackage ttf-roboto-mono # A monospaced addition to the Roboto type family.
 
 AddPackage openssh # Premier connectivity tool for remote login with the SSH protocol
@@ -46,7 +47,6 @@ AddPackage typos # Source code spell checker
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-browser.socket /usr/lib/systemd/user/gpg-agent-browser.socket
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-extra.socket /usr/lib/systemd/user/gpg-agent-extra.socket
-CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-ssh.socket /usr/lib/systemd/user/gpg-agent-ssh.socket
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent.socket /usr/lib/systemd/user/gpg-agent.socket
 
 # systemd

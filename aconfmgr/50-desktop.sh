@@ -30,7 +30,6 @@ AddPackage --foreign clipman # A simple clipboard manager for Wayland
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Core
-AddPackage discord # All-in-one voice and text chat for gamers
 AddPackage --foreign google-chrome # The popular and trusted web browser by Google (Stable Channel)
 
 # Printing
@@ -72,6 +71,5 @@ AddPackage lib32-systemd # system and service manager (32-bit)
 
 # Minecraft
 # AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
-# AddPackage --foreign glfw-wayland-minecraft # A free, open source, portable framework for graphical application development (wayland, patched for Minecraft)
 # AddPackage qt5-wayland # Provides APIs for Wayland
 # AddPackage jdk8-openjdk # OpenJDK Java 8 development kit (needed for E6E)
