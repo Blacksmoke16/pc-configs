@@ -20,6 +20,7 @@ AddPackage base-devel # Basic tools to build Arch Linux packages
 # Crystal
 AddPackage clang # C language family frontend for LLVM
 AddPackage llvm # Compiler infrastructure
+AddPackage lld # Linker from the LLVM project
 AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
 AddPackage --foreign oq-bin

@@ -19,6 +19,7 @@ export GTK_THEME='Breeze-Dark'
 # Setup dev related ENV vars
 export CC=clang
 export CXX=clang++
+export CRYSTAL_OPTS='--link-flags=-fuse-ld=lld'
 
 # Explicitly configure XDG vars just to have them
 export XDG_DATA_HOME="$HOME/.local/share"
