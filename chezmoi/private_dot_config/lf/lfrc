@@ -6,6 +6,9 @@ set drawbox
 set ratios 1:1
 set tabstop 2
 
+set previewer pistol
+set sixel true
+
 map c copy
 map x cut
 map <c-k> clear

@@ -62,6 +62,7 @@
     update = !git fo && git merge origin/master
     sync   = !git latest && git fetch upstream && git rebase upstream/master
     unstage = reset --quiet
+    clean-branches = !git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
 
 {{ if eq .chezmoi.os "darwin" -}}
 [includeIf "gitdir:~/bsmoke/"]

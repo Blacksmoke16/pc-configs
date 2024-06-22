@@ -37,11 +37,15 @@ AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage rocm-smi-lib # ROCm System Management Interface Library
-AddPackage lf # A terminal file manager inspired by ranger
 AddPackage fzf # Command-line fuzzy finder
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage diff-so-fancy # Good-looking diffs with diff-highlight and more
 AddPackage typos # Source code spell checker
+
+# File browsing
+AddPackage lf # A terminal file manager inspired by ranger
+AddPackage chafa # Image-to-text converter supporting a wide range of symbols and palettes, transparency, animations, etc.
+AddPackage pistol-git # General purpose file previewer
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket
