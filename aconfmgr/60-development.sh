@@ -37,16 +37,3 @@ AddPackage --foreign oq-bin
 # AddPackage autoconf # A GNU tool for automatically configuring source code
 # AddPackage bison # The GNU general-purpose parser generator
 # AddPackage re2c # A tool for generating C-based recognizers from regular expressions
-
-# https://github.com/the-benchmarker/web-frameworks
-# AddPackage ruby
-# AddPackage postgresql-libs
-# AddPackage --foreign wrk
-
-# Command to create/run DB for collecting the data
-# sudo docker run --rm --name pg -d \
-#     -p 5432:5432 \
-#     -v $PWD/dump.sql:/docker-entrypoint-initdb.d/dump.sql \
-#     -e POSTGRES_DB=benchmark \
-#     -e POSTGRES_HOST_AUTH_METHOD=trust \
-#     postgres:14-alpine
