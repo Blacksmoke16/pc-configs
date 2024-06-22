@@ -11,8 +11,14 @@ set sixel true
 
 map c copy
 map x cut
+map v paste
 map <c-k> clear
 map h set hidden!
+
+cmd copy_to_clipboard ${{
+    wl-copy < "$f"
+}}
+map <c-c> copy_to_clipboard
 
 cmd trash %trash-put "$fx"
 map <delete> trash
