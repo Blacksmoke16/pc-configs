@@ -14,6 +14,10 @@ AddPackage waybar # Highly customizable Wayland bar for Sway and Wlroots based c
 AddPackage wofi # launcher for wlroots-based wayland compositors
 AddPackage wlsunset # Day/night gamma adjustments for Wayland compositors
 
+# Webcam
+AddPackage xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
+AddPackage cameractrls # Camera controls for Linux
+
 # TODO: Remove this once https://youtrack.jetbrains.com/issue/JBR-3206 is resolved.
 AddPackage xorg-xwayland # run X clients under wayland
 
@@ -63,7 +67,11 @@ CopyFile /etc/udev/rules.d/51-trezor.rules
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
 AddPackage pulseaudio # A featureful, general-purpose sound server
 AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
+CreateLink /etc/systemd/user/pipewire-session-manager.service /usr/lib/systemd/user/wireplumber.service
+CreateLink /etc/systemd/user/pipewire.service.wants/wireplumber.service /usr/lib/systemd/user/wireplumber.service
+CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
+CopyFile /etc/pulse/client.conf
 
 # Gaming
 AddPackage steam # Valve's digital software delivery system

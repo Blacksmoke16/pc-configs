@@ -61,3 +61,4 @@ adm:x:999:daemon
 george:x:1000:
 nobody:x:65534:
 openvpn:x:964:
+geoclue:x:963:

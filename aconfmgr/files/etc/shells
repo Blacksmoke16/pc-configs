@@ -6,3 +6,4 @@
 /usr/bin/git-shell
 /bin/rbash
 /usr/bin/rbash
+/usr/bin/systemd-home-fallback-shell

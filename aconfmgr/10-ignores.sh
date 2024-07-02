@@ -40,11 +40,16 @@ IgnorePath '/var/log/*'
 # systemd-update-done.service
 IgnorePath '/etc/.updated'
 IgnorePath '/var/.updated'
+IgnorePath '/var/lib/systemd/network'
 
 # random
 IgnorePath '/lost+found'
 IgnorePath '/etc/sgml/*'
 IgnorePath '/etc/resolv.conf'
+IgnorePath '/usr/share/perl5'
+IgnorePath '/var/lib/geoclue'
+IgnorePath '/var/lib/lastlog'
+IgnorePath '/var/lib/libuuid'
 
 # yay
 IgnorePackage --foreign yay-bin

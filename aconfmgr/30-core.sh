@@ -45,7 +45,7 @@ AddPackage typos # Source code spell checker
 # File browsing
 AddPackage lf # A terminal file manager inspired by ranger
 AddPackage chafa # Image-to-text converter supporting a wide range of symbols and palettes, transparency, animations, etc.
-AddPackage pistol-git # General purpose file previewer
+AddPackage --foreign pistol-git # General purpose file previewer
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket
