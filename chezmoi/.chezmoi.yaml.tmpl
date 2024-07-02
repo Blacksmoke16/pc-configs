@@ -4,18 +4,12 @@
 {{- $primary := false -}}{{/* true if this machine is my daily driver */}}
 {{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
 
-{{- $email := "george@dietrich.app" -}}
+{{- $email := "dev@dietrich.pub" -}}
 {{- $gitDir := "/dev/git" -}}
-{{- if eq .chezmoi.os "darwin" -}}
-{{-   $email = "george.dietrich@jazzhr.com" -}}
-{{-   $gitDir = "/bsmoke" -}}
-{{- end -}}
 
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq $hostname "theStone" -}}
 {{-   $primary = true -}}
-{{-   $personal = true -}}
-{{- else if eq $email "george.dietrich@jazzhr.com" -}}
 {{-   $personal = true -}}
 {{- end -}}
 

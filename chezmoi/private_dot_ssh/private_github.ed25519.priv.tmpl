@@ -1,6 +1,3 @@
 {{- $itemId := "e64973fc-f92e-4afa-bd6e-aefe016c55a6" -}}
-{{- if eq .email "george.dietrich@jazzhr.com" -}}
-{{-   $itemId = "d26de2df-87f6-4b1d-93c5-af0000e59615" -}}
-{{- end -}}
 
 {{ (bitwarden "item" $itemId).notes }}

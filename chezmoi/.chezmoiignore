@@ -1,41 +1,6 @@
 # Use README's as documentation
 **/README.md
 
-{{ if not .primary -}}
-# Explicitly whitelist non primary PC files
-**
-
-!.bash_profile
-!.bashrc
-
-!.local
-!.local/share
-!.local/share/scripts
-!.local/share/scripts/ps1.sh
-
-!.config
-!.config/btop/**
-!.config/git/**
-!.config/lf/**
-!.config/sublime-text/**
-!.config/Typora/**
-!.config/readline/**
-!.config/wezterm/**
-
-!.ssh/
-!.ssh/config
-!.ssh/github.ed25519.priv
-!.ssh/github.ed25519.pub
-{{ else -}}
-# Exclude these on primary PC as they're handled via scripts
-.config/gnucash/**
-.config/Typora/profile.json
-{{ end -}}
-
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
-{{ end }}
-
-{{ if ne .chezmoi.os "darwin" }}
-.chezmoiscripts/darwin/**
 {{ end }}
