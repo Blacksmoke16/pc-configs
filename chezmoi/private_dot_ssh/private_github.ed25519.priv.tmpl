@@ -1,3 +1,6 @@
 {{- $itemId := "e64973fc-f92e-4afa-bd6e-aefe016c55a6" -}}
+{{- if eq .email "george@fieldguide.io" -}}
+{{-   $itemId = "e2f0bdce-aa4b-44bc-9832-b1f600f41663" -}}
+{{- end -}}
 
 {{ (bitwarden "item" $itemId).notes }}

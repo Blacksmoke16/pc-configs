@@ -11,6 +11,8 @@
 {{- if eq $hostname "theStone" -}}
 {{-   $primary = true -}}
 {{-   $personal = true -}}
+{{- else if eq $hostname "georges-MacBook-Pro" -}}
+{{-   $personal = true -}}
 {{- end -}}
 
 sourceDir: {{ promptString "sourceDir" | quote }}

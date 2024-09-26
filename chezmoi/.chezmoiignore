@@ -4,3 +4,24 @@
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
 {{ end }}
+
+# These are only applicable on primary PC
+{{ if not .primary }}
+.config/gnucash/**
+.config/neofetch/**
+.config/pistol/**
+.config/sway/**
+.config/swaylock/**
+.config/systemd/**
+.config/waybar/**
+.config/yay/**
+
+.local/bin/sources/**
+.local/bin/start-sway.sh
+.local/share/gnupg/**
+
+.ssh/router.*
+.ssh/aur.*
+
+gnucash-dconf-load.sh
+{{ end }}
