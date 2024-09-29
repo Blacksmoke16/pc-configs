@@ -2,6 +2,7 @@
 AddPackage vulkan-validation-layers # Vulkan Validation Layers
 AddPackage mesa # An open-source implementation of the OpenGL specification
 AddPackage vulkan-radeon # Radeon's Vulkan mesa driver
+AddPackage vulkan-mesa-layers # Mesa's Vulkan layers
 AddPackage lib32-vulkan-radeon # Radeon's Vulkan mesa driver (32-bit)
 AddPackage libva-mesa-driver # VA-API drivers
 
