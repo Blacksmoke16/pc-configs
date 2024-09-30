@@ -1,0 +1,23 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<'EOF'
+tap "homebrew/bundle"
+brew "awscli"
+brew "bash"
+brew "bash-completion@2"
+brew "chezmoi"
+brew "crystal"
+brew "diff-so-fancy"
+brew "git"
+brew "pinentry"
+brew "gnupg"
+brew "kcov"
+brew "ncurses"
+brew "less"
+brew "lf"
+cask "font-roboto-mono"
+cask "sublime-text"
+cask "wezterm"
+EOF
+{{ end -}}

@@ -1,6 +1,8 @@
+{{- if eq .chezmoi.os "darwin" -}}
 pinentry-program /usr/bin/pinentry-curses
-
+{{ else -}}
+pinentry-program /usr/bin/pinentry-curses
+{{ end -}}
 enable-ssh-support
-
 max-cache-ttl 34560000
 default-cache-ttl 34560000

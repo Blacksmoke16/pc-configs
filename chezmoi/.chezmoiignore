@@ -5,6 +5,10 @@
 .chezmoiscripts/linux/**
 {{ end }}
 
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+{{ end }}
+
 # These are only applicable on primary PC
 {{ if not .primary }}
 .config/gnucash/**
@@ -18,7 +22,6 @@
 
 .local/bin/sources/**
 .local/bin/start-sway.sh
-.local/share/gnupg/**
 
 .ssh/router.*
 .ssh/aur.*
