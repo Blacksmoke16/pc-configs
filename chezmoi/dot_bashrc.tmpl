@@ -42,6 +42,11 @@ if [ -d $GIT_DIR/crystal ]; then
     alias wcr='watchexec --signal=TERM --watch=src/ --watch=spec/ --emit-events-to=none --clear -- crystal $1'
 fi
 
+# Make the shell aware of the GPG agent
+# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 {{ if .personal -}}
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 alias bw-lock='bw lock && unset BW_SESSION'
@@ -55,11 +60,6 @@ alias pbcopy='wl-copy'
 
 # Force aconfmgr to not use $XDG_CONFIG_HOME
 alias aconfmgr='aconfmgr -c $GIT_DIR/pc-configs/aconfmgr'
-
-# Make the shell aware of the GPG agent
-# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
 {{ end -}}
 
 # Place to put stuff local to a specific machine not worth sharing
