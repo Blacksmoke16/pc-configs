@@ -50,6 +50,7 @@
     signingkey = 1E3D9616D23702FF
     useConfigOnly = true
 [alias]
+    default-branch = !git remote show origin | sed -n '/HEAD branch/s/.*: //p'
     co = checkout
     cmp = "!f() { git commit --all --message \"$@\" && git push; }; f"
     df = diff HEAD
@@ -57,9 +58,9 @@
     fo = fetch origin
     po = !git pull origin $1
     fco = !git fo && git co $1 && git po $1
-    latest = !git fo && git co master && git pull origin master
-    update = !git fo && git merge origin/master
-    sync   = !git latest && git fetch upstream && git rebase upstream/master
+    latest = !git fo && git co $(git default-branch) && git pull origin $(git default-branch)
+    update = !git fo && git merge origin/$(git default-branch)
+    sync   = !git latest && git fetch upstream && git rebase upstream/$(git default-branch)
     unstage = reset --quiet
     cb = !git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
     l = !git log --all --graph --format='%C(auto)%h (%ci) %G? %C(auto)%cn <%ce> - %s'
