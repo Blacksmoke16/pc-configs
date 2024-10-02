@@ -64,6 +64,7 @@
     unstage = reset --quiet
     cb = !git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
     l = !git log --all --graph --format='%C(auto)%h (%ci) %G? %C(auto)%cn <%ce> - %s'
+    ls = !git --no-pager l | head --lines=25
 
 {{ if eq .chezmoi.os "darwin" -}}
 [includeIf "gitdir:~/bsmoke/"]
