@@ -51,11 +51,9 @@
     useConfigOnly = true
 [alias]
     co = checkout
-    cm = commit --all --message
     cmp = "!f() { git commit --all --message \"$@\" && git push; }; f"
     df = diff HEAD
     st = status -sb
-    fixup = "!git log -n 15 --pretty=format:'%h %s' --no-merges | fzf | cut -c -10 | xargs -o git commit --fixup"
     fo = fetch origin
     po = !git pull origin $1
     fco = !git fo && git co $1 && git po $1
@@ -64,6 +62,7 @@
     sync   = !git latest && git fetch upstream && git rebase upstream/master
     unstage = reset --quiet
     clean-branches = !git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
+    l = !git log --all --graph --format='%C(auto)%h (%ci) %G? %C(auto)%cn <%ce> - %s'
 
 {{ if eq .chezmoi.os "darwin" -}}
 [includeIf "gitdir:~/bsmoke/"]
