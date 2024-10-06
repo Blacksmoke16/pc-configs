@@ -27,6 +27,7 @@ GIT_DIR="{{ .git.dir }}"
 # ALIASES
 
 alias reload='. $HOME/.bash_profile'
+alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
 
 alias grep='grep --color=auto'
 alias ls='ls -F --color=auto'
