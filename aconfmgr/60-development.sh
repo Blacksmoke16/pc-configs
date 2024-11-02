@@ -22,6 +22,7 @@ AddPackage llvm # Compiler infrastructure
 AddPackage lld # Linker from the LLVM project
 AddPackage crystal # The Crystal Programming Language
 AddPackage shards # The package manager for the Crystal language
+AddPackage kcov # Code coverage tester for compiled programs, Python scripts and shell scripts
 AddPackage --foreign oq-bin
 
 # Node
