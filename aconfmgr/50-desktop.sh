@@ -53,9 +53,12 @@ AddPackage sane # Scanner Access Now Easy
 CopyFile /etc/sane.d/net.conf
 CopyFile /etc/sane.d/dll.conf
 AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
+AddPackage simple-scan # Simple scanning utility
+SetFileProperty /etc/cups/printers.conf group ''
+
 # sudo brsaneconfig4 -a name="color" model="mfc-j835dw" ip=192.168.1.31
 CopyFile /opt/brother/scanner/brscan4/brsanenetdevice4.cfg
-AddPackage simple-scan # Simple scanning utility
+
 
 # Finance
 AddPackage gnucash # Personal and small-business financial-accounting application
@@ -76,6 +79,8 @@ CopyFile /etc/pulse/client.conf
 # Gaming
 AddPackage steam # Valve's digital software delivery system
 AddPackage lib32-systemd # system and service manager (32-bit)
+AddPackage lutris # Open Gaming Platform
+AddPackage wine-staging # A compatibility layer for running Windows programs - Staging branch
 
 # Minecraft
 # AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
