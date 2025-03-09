@@ -1,4 +1,5 @@
 # General
+AddPackage just # A handy way to save and run project-specific commands
 AddPackage sublime-text # Sublime Text is a sophisticated text editor for code, markup and prose
 AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
 AddPackage watchexec # Executes commands in response to file modifications
