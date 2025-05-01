@@ -7,18 +7,12 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    "context": "Editor",
     "bindings": {
       "ctrl-shift-s": "workspace::SaveWithoutFormat",
       "ctrl-shift-delete": "editor::DeleteToEndOfLine",
       "ctrl-shift-backspace": "editor::DeleteLine",
       "ctrl-e": null
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
     }
   }
 ]
