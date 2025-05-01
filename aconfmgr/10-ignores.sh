@@ -144,5 +144,10 @@ IgnorePath '/usr/share/polkit-1/rules.d/*'
 # colord
 IgnorePath '/etc/colord/*'
 
+# vlc
+IgnorePath '/usr/lib/vlc/*'
+
 # Misc
 IgnorePath '/data/*'
+IgnorePath '/usr/lib32/gconv'
+IgnorePath '/usr/lib/gconv'

@@ -29,7 +29,7 @@ AddPackage kcov # Code coverage tester for compiled programs, Python scripts and
 AddPackage --foreign oq-bin
 
 # Node
-# AddPackage --foreign nvm
+AddPackage nvm
 
 # PHP
 # AddPackage php # A general-purpose scripting language that is especially suited to web development

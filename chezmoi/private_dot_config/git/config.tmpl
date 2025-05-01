@@ -15,7 +15,7 @@
     whitespace = red reverse
 [core]
     autocrlf = input
-    editor = nano
+    editor = zed --wait
     warnAmbiguousRefs = true
     pager = diff-so-fancy | less --tabs=2 -RFX
 [branch]
@@ -66,6 +66,7 @@
     l = !git log --all --graph --color --format='%C(auto)%h %d (%ci) %G? %C(auto)%cn <%ce> - %s'
     ls = !git --no-pager l | head --lines=25
     pr = "!f() { if [ $# -lt 1 ]; then echo \"Usage: git pr <id> [<remote>]  # assuming <remote>[=origin] is on GitHub\"; else git checkout -q \"$(git rev-parse --verify HEAD)\" && git fetch -fv \"${2:-origin}\" pull/\"$1\"/head:pr/\"$1\" && git checkout pr/\"$1\"; fi; }; f"
+    fixup = "!git log -n 1 --pretty=format:'%h %s' --no-merges | cut -c -7 | xargs -o git commit --fixup"
 
 {{ if eq .chezmoi.os "darwin" -}}
 [includeIf "gitdir:~/bsmoke/"]

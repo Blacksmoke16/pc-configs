@@ -7,11 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "auto_indent_on_paste": false,
   "outline_panel": {
     "dock": "right"
-  },
-  "features": {
-    "edit_prediction_provider": "none"
   },
   "diagnostics": {
     "include_warnings": true,
@@ -36,11 +34,13 @@
     "docker": true,
     "docker-compose": true,
     "html": true,
+    "make": true,
     "sublime-mariana-theme": true,
     "terraform": true
   },
   "file_types": {
-    "Dockerfile": ["Dockerfile.*"]
+    "Dockerfile": ["Dockerfile.*"],
+    "YAML": ["shard.lock"]
   },
   "languages": {
     "Crystal": {
