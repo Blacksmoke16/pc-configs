@@ -9,6 +9,7 @@
   {
     "context": "Editor",
     "bindings": {
+      "ctrl-enter": "editor::ToggleCodeActions",
       "ctrl-shift-s": "workspace::SaveWithoutFormat",
       "ctrl-shift-delete": "editor::DeleteToEndOfLine",
       "ctrl-shift-backspace": "editor::DeleteLine",

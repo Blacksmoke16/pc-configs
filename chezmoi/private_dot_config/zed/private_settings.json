@@ -7,27 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "button": false
+  },
   "auto_indent_on_paste": false,
-  "outline_panel": {
-    "dock": "right"
-  },
-  "diagnostics": {
-    "include_warnings": true,
-    "inline": {
-      "enabled": true
-    }
-  },
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
-  "ui_font_family": "Roboto Mono",
-  "base_keymap": "SublimeText",
-  "show_whitespaces": "all",
-  "theme": {
-    "mode": "system",
-    "light": "Sublime Mariana",
-    "dark": "One Dark"
-  },
-  "tab_size": 2,
   "auto_install_extensions": {
     "basher": true,
     "crystal": true,
@@ -38,6 +21,19 @@
     "sublime-mariana-theme": true,
     "terraform": true
   },
+  "base_keymap": "SublimeText",
+  "buffer_font_size": 14,
+  "collaboration_panel": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": false,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
+  },
+  "diagnostics_max_severity": "hint",
   "file_types": {
     "Dockerfile": ["Dockerfile.*"],
     "YAML": ["shard.lock"]
@@ -45,16 +41,47 @@
   "languages": {
     "Crystal": {
       "extend_comment_on_newline": false,
-      "language_servers": ["ameba-ls"],
       "formatter": {
         "external": {
-          "command": "crystal",
-          "arguments": ["tool", "format", "-"]
+          "arguments": ["tool", "format", "-"],
+          "command": "crystal"
         }
-      }
+      },
+      "language_servers": ["ameba-ls", "typos", "cspell"]
+    },
+    "PHP": {
+      "language_servers": ["phpactor", "typos", "cspell"]
     },
     "Ruby": {
-      "language_servers": ["solargraph", "rubocop"]
+      "language_servers": ["solargraph", "rubocop", "typos", "cspell"]
+    },
+    "YAML": {
+      "prettier": {
+        "allowed": true,
+        "singleQuote": true
+      }
     }
-  }
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "scrollbar": {
+    "diagnostics": "none"
+  },
+  "search": {
+    "button": false
+  },
+  "show_whitespaces": "all",
+  "show_wrap_guides": true,
+  "tab_size": 2,
+  "theme": {
+    "dark": "One Dark",
+    "light": "Sublime Mariana",
+    "mode": "system"
+  },
+  "ui_font_family": "Roboto Mono",
+  "ui_font_size": 14
 }
