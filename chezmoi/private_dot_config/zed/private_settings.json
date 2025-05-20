@@ -14,12 +14,17 @@
   "auto_install_extensions": {
     "basher": true,
     "crystal": true,
+    "cspell": true,
     "docker": true,
     "docker-compose": true,
+    "dockerfile": true,
     "html": true,
+    "just": true,
     "make": true,
+    "php": true,
     "sublime-mariana-theme": true,
-    "terraform": true
+    "terraform": true,
+    "typos": true
   },
   "base_keymap": "SublimeText",
   "buffer_font_size": 14,
@@ -54,6 +59,14 @@
     },
     "Ruby": {
       "language_servers": ["solargraph", "rubocop", "typos", "cspell"]
+    },
+    "Terraform": {
+      "formatter": {
+        "external": {
+          "arguments": ["fmt", "-"],
+          "command": "terraform"
+        }
+      }
     },
     "YAML": {
       "prettier": {
