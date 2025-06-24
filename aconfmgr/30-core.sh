@@ -12,7 +12,6 @@ CopyFile /etc/hosts
 
 # pacman
 CopyFile /etc/pacman.conf
-CopyFile /etc/pacman.d/mirrorlist
 CreateFile /var/lib/systemd/timers/stamp-archlinux-keyring-wkd-sync.timer > /dev/null
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 
@@ -34,13 +33,15 @@ AddPackage ttf-roboto-mono # A monospaced addition to the Roboto type family.
 
 AddPackage openssh # Premier connectivity tool for remote login with the SSH protocol
 AddPackage gnupg # Complete and free implementation of the OpenPGP standard
-AddPackage neofetch # A CLI system information tool written in BASH that supports displaying images.
+AddPackage --foreign neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage rocm-smi-lib # ROCm System Management Interface Library
 AddPackage fzf # Command-line fuzzy finder
 AddPackage trash-cli # Command line trashcan (recycle bin) interface
 AddPackage diff-so-fancy # Good-looking diffs with diff-highlight and more
 AddPackage typos # Source code spell checker
+AddPackage mailcap # Helper application and MIME type associations for file types (provides MIME type database)
+AddPackage tree # A directory listing program displaying a depth indented list of files
 
 # File browsing
 AddPackage lf # A terminal file manager inspired by ranger

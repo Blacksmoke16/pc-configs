@@ -15,8 +15,8 @@ AddPackage wofi # launcher for wlroots-based wayland compositors
 AddPackage wlsunset # Day/night gamma adjustments for Wayland compositors
 
 # Webcam
-AddPackage xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
-AddPackage cameractrls # Camera controls for Linux
+# AddPackage xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
+# AddPackage cameractrls # Camera controls for Linux
 
 # TODO: Remove this once https://youtrack.jetbrains.com/issue/JBR-3206 is resolved.
 AddPackage xorg-xwayland # run X clients under wayland
@@ -86,3 +86,7 @@ AddPackage wine-staging # A compatibility layer for running Windows programs - S
 # AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
 # AddPackage qt5-wayland # Provides APIs for Wayland
 # AddPackage jdk8-openjdk # OpenJDK Java 8 development kit (needed for E6E)
+
+# CAD
+AddPackage freecad # Feature based parametric 3D CAD modeler
+AddPackage python-shapely # Manipulation and analysis of geometric objects in the Cartesian plane

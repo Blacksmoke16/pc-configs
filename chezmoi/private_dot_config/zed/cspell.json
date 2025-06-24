@@ -1,3 +1,15 @@
 {
-  "words": ["keymap", "unshift", "nodoc", "AMIME", "mimetypes", "showdoc"]
+  "words": [
+    "keymap",
+    "unshift",
+    "nodoc",
+    "AMIME",
+    "mimetypes",
+    "showdoc",
+    "ASPEC",
+    "codegen",
+    "stdlib",
+    "gsub",
+    "nilable"
+  ]
 }

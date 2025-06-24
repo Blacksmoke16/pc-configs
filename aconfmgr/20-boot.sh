@@ -12,7 +12,7 @@ AddPackage sudo # Give certain users the ability to run some commands as root
 SetFileProperty /usr/bin/newgidmap mode ''
 SetFileProperty /usr/bin/newuidmap mode ''
 
-# filesytem
+# filesystem
 CopyFile /etc/fstab
 CreateLink /etc/systemd/system/timers.target.wants/fstrim.timer /usr/lib/systemd/system/fstrim.timer
 

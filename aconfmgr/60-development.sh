@@ -1,6 +1,7 @@
 # General
 AddPackage just # A handy way to save and run project-specific commands
 AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
+AddPackage opentofu # Lets you declaratively manage your cloud infrastructure
 AddPackage watchexec # Executes commands in response to file modifications
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
@@ -9,6 +10,7 @@ AddPackage bind # A complete, highly portable implementation of the DNS protocol
 AddPackage less # A terminal based program for viewing text files
 AddPackage rsync # A fast and versatile file copying tool for remote and local files (required for zed auto-update)
 AddPackage --foreign shellcheck-bin # Shell script analysis tool (binary release, static)
+AddPackage --foreign aws-cli-bin # Unified command line interface for Amazon Web Services (Amazon provided v2 binary release)
 
 # Docker
 AddPackage docker # Pack, ship and run any application as a lightweight container

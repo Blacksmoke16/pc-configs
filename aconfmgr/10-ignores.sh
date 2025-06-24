@@ -78,6 +78,7 @@ IgnorePath '/etc/ssl/certs'
 
 # pacman
 IgnorePath '/etc/pacman.d/gnupg'
+IgnorePath '/etc/pacman.d/mirrorlist' # this can be generated whenever and isn't really static/worth having in VC
 IgnorePath '/etc/pacman.d/mirrorlist.pacnew'
 IgnorePath '/var/lib/pacman/local/*'
 IgnorePath '/var/lib/pacman/sync/*'
@@ -151,3 +152,6 @@ IgnorePath '/usr/lib/vlc/*'
 IgnorePath '/data/*'
 IgnorePath '/usr/lib32/gconv'
 IgnorePath '/usr/lib/gconv'
+
+# Python
+IgnorePath '/usr/lib/python3.13/*'
