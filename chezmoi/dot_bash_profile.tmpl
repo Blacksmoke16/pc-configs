@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Standards related ENV vars
+export DO_NOT_TRACK=1
+
 # Configure $EDITOR and $VISUAL
 export EDITOR=nano
 export VISUAL=subl
