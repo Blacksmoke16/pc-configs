@@ -3,7 +3,6 @@ AddPackage just # A handy way to save and run project-specific commands
 AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
 AddPackage opentofu # Lets you declaratively manage your cloud infrastructure
 AddPackage watchexec # Executes commands in response to file modifications
-AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign xxd-standalone # Hexdump utility from vim
 AddPackage bind # A complete, highly portable implementation of the DNS protocol

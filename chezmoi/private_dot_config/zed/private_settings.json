@@ -39,6 +39,7 @@
     }
   },
   "diagnostics_max_severity": "hint",
+  "disable_ai": true,
   "file_types": {
     "Dockerfile": ["Dockerfile.*"],
     "YAML": ["shard.lock"]
@@ -69,9 +70,18 @@
       }
     },
     "YAML": {
-      "prettier": {
-        "allowed": true,
-        "singleQuote": true
+      "formatter": "language_server"
+    }
+  },
+  "lsp": {
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "format": {
+            "printWidth": 999, // Disable this
+            "singleQuote": true
+          }
+        }
       }
     }
   },

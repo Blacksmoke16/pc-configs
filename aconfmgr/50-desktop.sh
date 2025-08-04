@@ -34,7 +34,7 @@ AddPackage --foreign clipman # A simple clipboard manager for Wayland
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Core
-AddPackage --foreign google-chrome # The popular and trusted web browser by Google (Stable Channel)
+AddPackage --foreign brave-bin # Web browser that blocks ads and trackers by default (binary release)
 
 # Printing
 AddPackage cups # The CUPS Printing System - daemon package

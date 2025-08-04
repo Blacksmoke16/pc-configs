@@ -13,6 +13,7 @@
       "ctrl-shift-s": "workspace::SaveWithoutFormat",
       "ctrl-shift-delete": "editor::DeleteToEndOfLine",
       "ctrl-shift-backspace": "editor::DeleteLine",
+      "ctrl-l": "language_selector::Toggle",
       "ctrl-e": null
     }
   }

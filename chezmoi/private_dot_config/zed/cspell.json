@@ -10,6 +10,7 @@
     "codegen",
     "stdlib",
     "gsub",
-    "nilable"
+    "nilable",
+    "hasura"
   ]
 }

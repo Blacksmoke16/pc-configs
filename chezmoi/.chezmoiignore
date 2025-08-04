@@ -23,7 +23,6 @@
 .local/bin/sources/**
 .local/bin/start-sway.sh
 
-.ssh/router.*
 .ssh/aur.*
 
 gnucash-dconf-load.sh
