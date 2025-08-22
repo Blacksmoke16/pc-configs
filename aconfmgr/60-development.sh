@@ -10,6 +10,7 @@ AddPackage less # A terminal based program for viewing text files
 AddPackage rsync # A fast and versatile file copying tool for remote and local files (required for zed auto-update)
 AddPackage --foreign shellcheck-bin # Shell script analysis tool (binary release, static)
 AddPackage --foreign aws-cli-bin # Unified command line interface for Amazon Web Services (Amazon provided v2 binary release)
+AddPackage github-cli # The GitHub CLI
 
 # Docker
 AddPackage docker # Pack, ship and run any application as a lightweight container

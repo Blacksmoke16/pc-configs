@@ -35,6 +35,7 @@ AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 
 # Core
 AddPackage --foreign brave-bin # Web browser that blocks ads and trackers by default (binary release)
+AddPackage --foreign obsidian-bin # A powerful knowledge base that works on top of a local folder of plain text Markdown files (Official binary package with bundled Electron)
 
 # Printing
 AddPackage cups # The CUPS Printing System - daemon package
@@ -88,5 +89,5 @@ AddPackage wine-staging # A compatibility layer for running Windows programs - S
 # AddPackage jdk8-openjdk # OpenJDK Java 8 development kit (needed for E6E)
 
 # CAD
-AddPackage freecad # Feature based parametric 3D CAD modeler
-AddPackage python-shapely # Manipulation and analysis of geometric objects in the Cartesian plane
+# AddPackage freecad # Feature based parametric 3D CAD modeler
+# AddPackage python-shapely # Manipulation and analysis of geometric objects in the Cartesian plane

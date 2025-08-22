@@ -23,6 +23,9 @@ AddPackage reflector # A Python 3 module and script to retrieve and filter the l
 AddPackage --foreign aconfmgr-git
 AddPackage chezmoi
 
+AddPackage rsnapshot # A remote filesystem snapshot utility
+CopyFile /etc/rsnapshot.conf
+
 AddPackage fakeroot # Required by yay
 
 AddPackage noto-fonts # Google Noto TTF fonts
@@ -47,6 +50,7 @@ AddPackage tree # A directory listing program displaying a depth indented list o
 AddPackage lf # A terminal file manager inspired by ranger
 AddPackage chafa # Image-to-text converter supporting a wide range of symbols and palettes, transparency, animations, etc.
 AddPackage --foreign pistol-git # General purpose file previewer
+AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
 
 # Setups GPG
 CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket

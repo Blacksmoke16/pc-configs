@@ -157,3 +157,9 @@ IgnorePath '/usr/lib/gconv'
 
 # Python
 IgnorePath '/usr/lib/python3.13/*'
+
+# Ruby
+IgnorePath '/usr/lib/ruby/*'
+
+# Obsidian
+IgnorePath '/usr/bin/obsidian'
