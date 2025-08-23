@@ -40,24 +40,23 @@ AddPackage --foreign obsidian-bin # A powerful knowledge base that works on top 
 # Printing
 AddPackage cups # The CUPS Printing System - daemon package
 AddPackage --foreign brother-mfc-j885dw # LPR and CUPS driver for the Brother MFC-J885DW printer
+AddPackage --foreign brother-mfcj835dw-cups-bin # CUPS wrapper for Brother MFC-J835DW printer
 CreateLink /etc/systemd/system/sockets.target.wants/cups.socket /usr/lib/systemd/system/cups.socket
 CopyFile /etc/cups/ppd/color.ppd 640 '' cups
 function PrinterConfFilter() {
     sed 's/Attribute marker-change-time .*/Attribute marker-change-time 1663713996/' | \
         sed 's/StateTime .*/StateTime 1663713996/' | \
+        sed 's/ConfigTime .*/ConfigTime 1663713536/' | \
         sed 's/Attribute marker-levels .*/Attribute marker-levels -1,-1,-1,-1,-1/'
 }
 AddFileContentFilter '/etc/cups/printers.conf' PrinterConfFilter
-CopyFile /etc/cups/printers.conf 600
 SetFileProperty /etc/cups/printers.conf group root
+CopyFile /etc/cups/printers.conf 600
 AddPackage sane # Scanner Access Now Easy
 CopyFile /etc/sane.d/net.conf
 CopyFile /etc/sane.d/dll.conf
-AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
 AddPackage simple-scan # Simple scanning utility
-SetFileProperty /etc/cups/printers.conf group ''
-
-# sudo brsaneconfig4 -a name="color" model="mfc-j835dw" ip=192.168.1.31
+AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
 CopyFile /opt/brother/scanner/brscan4/brsanenetdevice4.cfg
 
 
