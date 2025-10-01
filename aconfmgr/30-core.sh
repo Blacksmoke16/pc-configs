@@ -15,6 +15,9 @@ CopyFile /etc/pacman.conf
 CreateFile /var/lib/systemd/timers/stamp-archlinux-keyring-wkd-sync.timer > /dev/null
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 
+# flatpak
+AddPackage flatpak # Linux application sandboxing and distribution framework (formerly xdg-app)
+
 #
 # Add primary packages that are needed no matter what DE/WM are being used
 #
@@ -45,6 +48,7 @@ AddPackage diff-so-fancy # Good-looking diffs with diff-highlight and more
 AddPackage typos # Source code spell checker
 AddPackage mailcap # Helper application and MIME type associations for file types (provides MIME type database)
 AddPackage tree # A directory listing program displaying a depth indented list of files
+AddPackage msmtp # A mini smtp client
 
 # File browsing
 AddPackage lf # A terminal file manager inspired by ranger

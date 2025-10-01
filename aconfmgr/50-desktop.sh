@@ -50,15 +50,15 @@ function PrinterConfFilter() {
         sed 's/Attribute marker-levels .*/Attribute marker-levels -1,-1,-1,-1,-1/'
 }
 AddFileContentFilter '/etc/cups/printers.conf' PrinterConfFilter
-SetFileProperty /etc/cups/printers.conf group root
 CopyFile /etc/cups/printers.conf 600
+SetFileProperty /etc/cups/printers.conf group root
 AddPackage sane # Scanner Access Now Easy
 CopyFile /etc/sane.d/net.conf
 CopyFile /etc/sane.d/dll.conf
 AddPackage simple-scan # Simple scanning utility
 AddPackage --foreign brscan4 # SANE drivers from Brother for compatible models
 CopyFile /opt/brother/scanner/brscan4/brsanenetdevice4.cfg
-
+AddPackage --foreign ocrmypdf # A tool to add an OCR text layer to scanned PDF files, allowing them to be searched
 
 # Finance
 AddPackage gnucash # Personal and small-business financial-accounting application

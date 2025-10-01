@@ -6,3 +6,5 @@ Thumbs.db
 
 # Jetbrains
 .idea/
+
+**/.claude/settings.local.json

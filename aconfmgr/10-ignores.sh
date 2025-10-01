@@ -69,7 +69,7 @@ IgnorePath '/usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache'
 IgnorePath '/usr/lib/gtk-2.0/2.10.0/immodules.cache'
 IgnorePath '/usr/lib/gtk-3.0/3.0.0/immodules.cache'
 IgnorePath '/usr/lib32/gtk-3.0/3.0.0/immodules.cache'
-IgnorePath '/usr/lib/gtk-4.0/4.0.0/*'
+IgnorePath '/usr/lib/gtk-4.0/4.0.0'
 IgnorePath '/usr/lib/gio/modules/giomodule.cache'
 
 # certificates
@@ -164,3 +164,7 @@ IgnorePath '/usr/lib/ruby/*'
 
 # Obsidian
 IgnorePath '/usr/bin/obsidian'
+
+# Flatpak
+IgnorePath '/var/lib/flatpak'
+IgnorePath '/var/tmp'
