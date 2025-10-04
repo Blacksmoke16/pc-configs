@@ -27,6 +27,8 @@
 [fetch]
     prune = true
     pruneTags = true
+[gpg]
+    format = ssh
 [help]
     autocorrect = prompt
 [init]
@@ -47,7 +49,7 @@
 [user]
     name = {{ .name }}
     email = {{ .email }}
-    signingkey = 1E3D9616D23702FF
+    signingkey = ~/.ssh/id_ed25519_signing.pub
     useConfigOnly = true
 [alias]
     default-branch = !git remote show origin | sed -n '/HEAD branch/s/.*: //p'

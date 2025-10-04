@@ -5,25 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Standards related ENV vars
-export DO_NOT_TRACK=1
-
-# Configure $EDITOR and $VISUAL
-export EDITOR=nano
-export VISUAL=subl
-
-# Setup application related ENV vars
-export PAGER=less
-export LESS='-RMF --mouse'
-export LESSHISTFILE='-' # Disable the ~/.lesshst file
-export GREP_COLORS='mt=38;5;196'
-export GTK_THEME='Breeze-Dark'
-
-# Setup dev related ENV vars
-export CC=clang
-export CXX=clang++
-
 # Explicitly configure XDG vars just to have them
+# These are defined first so other ENV vars can use them
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_BIN_HOME="$HOME/.local/bin"
@@ -46,6 +29,26 @@ export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export BITWARDEN_SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/.bitwarden-ssh-agent.sock"
+
+# Standards related ENV vars
+export DO_NOT_TRACK=1
+
+# Configure $EDITOR and $VISUAL
+export EDITOR=nano
+export VISUAL=subl
+
+# Setup dev related ENV vars
+export CC=clang
+export CXX=clang++
+
+# Setup application related ENV vars
+export PAGER=less
+export LESS='-RMF --mouse'
+export LESSHISTFILE='-' # Disable the ~/.lesshst file
+export GREP_COLORS='mt=38;5;196'
+export GTK_THEME='Breeze-Dark'
+export SSH_AUTH_SOCK="$BITWARDEN_SSH_AUTH_SOCK"
 
 # Custom PATH
 PATH="$HOME/.local/bin/:$PATH"
@@ -54,10 +57,5 @@ PATH="$HOME/.local/bin/:$PATH"
 if [ -r "$HOME/.bash_profile.local" ]; then
     . "$HOME/.bash_profile.local"
 fi
-
-{{ if .primary -}}
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-export PATH="$PATH:/home/george/.local/share/JetBrains/Toolbox/scripts"
-{{ end -}}
 
 [ "$BASH_VERSION" -a -z "$POSIXLY_CORRECT" ] && . "$HOME/.bashrc"

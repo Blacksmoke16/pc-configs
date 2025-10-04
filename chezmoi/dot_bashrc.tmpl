@@ -43,18 +43,12 @@ if [ -d $GIT_DIR/crystal ]; then
     alias wcr='watchexec --signal=TERM --watch=src/ --watch=spec/ --emit-events-to=none --clear -- crystal $1'
 fi
 
-# Make the shell aware of the GPG agent
-# https://wiki.archlinux.org/title/GnuPG#Set_SSH_AUTH_SOCK
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
-
 {{ if .personal -}}
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 alias bw-lock='bw lock && unset BW_SESSION'
 {{ end -}}
 
 {{ if .primary -}}
-alias services='sudo systemctl --type=service --state=running'
 alias refresh-mirrors='sudo reflector --save /etc/pacman.d/mirrorlist --protocol=https --ipv6 --ipv4 --latest=25 --age=12 --number=10 --sort=rate --verbose --threads=8'
 alias update-prices="gnucash-cli --quotes=get -- $XDG_DATA_HOME/gnucash/books/george.gnucash"
 alias pbcopy='wl-copy'

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Bitwarden
+# Not ideal, but not the end of the world
+Exec=env BITWARDEN_SSH_AUTH_SOCK=/run/user/1000/.bitwarden-ssh-agent.sock /home/george/.local/bin/bitwarden.AppImage
+Terminal=false

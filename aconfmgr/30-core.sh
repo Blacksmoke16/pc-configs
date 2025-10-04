@@ -15,9 +15,6 @@ CopyFile /etc/pacman.conf
 CreateFile /var/lib/systemd/timers/stamp-archlinux-keyring-wkd-sync.timer > /dev/null
 AddPackage reflector # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 
-# flatpak
-AddPackage flatpak # Linux application sandboxing and distribution framework (formerly xdg-app)
-
 #
 # Add primary packages that are needed no matter what DE/WM are being used
 #
@@ -38,7 +35,6 @@ AddPackage ttf-nerd-fonts-symbols-mono # High number of extra glyphs from popula
 AddPackage ttf-roboto-mono # A monospaced addition to the Roboto type family.
 
 AddPackage openssh # Premier connectivity tool for remote login with the SSH protocol
-AddPackage gnupg # Complete and free implementation of the OpenPGP standard
 AddPackage --foreign neofetch # A CLI system information tool written in BASH that supports displaying images.
 AddPackage btop # A monitor of system resources, bpytop ported to C++
 AddPackage rocm-smi-lib # ROCm System Management Interface Library
@@ -49,18 +45,14 @@ AddPackage typos # Source code spell checker
 AddPackage mailcap # Helper application and MIME type associations for file types (provides MIME type database)
 AddPackage tree # A directory listing program displaying a depth indented list of files
 AddPackage msmtp # A mini smtp client
+AddPackage bc # An arbitrary precision calculator language
+AddPackage fuse2 # Interface for userspace programs to export a filesystem to the Linux kernel
 
 # File browsing
 AddPackage lf # A terminal file manager inspired by ranger
 AddPackage chafa # Image-to-text converter supporting a wide range of symbols and palettes, transparency, animations, etc.
 AddPackage --foreign pistol-git # General purpose file previewer
 AddPackage syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
-
-# Setups GPG
-CreateLink /etc/systemd/user/sockets.target.wants/dirmngr.socket /usr/lib/systemd/user/dirmngr.socket
-CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-browser.socket /usr/lib/systemd/user/gpg-agent-browser.socket
-CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-extra.socket /usr/lib/systemd/user/gpg-agent-extra.socket
-CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent.socket /usr/lib/systemd/user/gpg-agent.socket
 
 # systemd
 CreateDir /var/lib/systemd/linger

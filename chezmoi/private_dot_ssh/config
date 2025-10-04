@@ -1,0 +1,31 @@
+Include config.local
+
+Host *
+  # only public key auth is allowed
+  PubkeyAuthentication yes
+  ChallengeResponseAuthentication no
+  PasswordAuthentication no
+
+  # dont forward ssh agent and X11 display
+  ForwardAgent no
+  ForwardX11 no
+
+  # only send the minimum env variables
+  SendEnv LANG
+
+  # this is spoofable, use ServerAliveInterval
+  TCPKeepAlive no
+
+  # check server connection after 60s of inactivity
+  ServerAliveInterval 60
+
+  # exit after 2 failed checks
+  ServerAliveCountMax 2
+
+  # Bitwarden handles this
+  IgnoreUnknown UseKeyChain
+  UseKeyChain no
+
+  IdentitiesOnly yes
+
+  AddKeysToAgent yes
