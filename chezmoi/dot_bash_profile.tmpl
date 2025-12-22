@@ -29,14 +29,24 @@ export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+
+# Personal PC has customization to support the custom path.
+# Otherwise, just fallback on the default
+{{- if not .personal -}}
 export BITWARDEN_SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/.bitwarden-ssh-agent.sock"
+
+{{ else }}
+export BITWARDEN_SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
+{{ end -}}
+
 
 # Standards related ENV vars
 export DO_NOT_TRACK=1
 
 # Configure $EDITOR and $VISUAL
 export EDITOR=nano
-export VISUAL=subl
+export VISUAL=zed
 
 # Setup dev related ENV vars
 export CC=clang
