@@ -23,7 +23,7 @@ config.keys = {
 
 wezterm.on('gui-startup', function(cmd)
   local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
-  pane:split { size = 0.5 }
+  pane:split { size = 0.75 }
 end)
 
 return config
