@@ -51,7 +51,7 @@ function PrinterConfFilter() {
 }
 AddFileContentFilter '/etc/cups/printers.conf' PrinterConfFilter
 CopyFile /etc/cups/printers.conf 600
-SetFileProperty /etc/cups/printers.conf group root
+SetFileProperty /etc/cups/printers.conf group ''
 AddPackage sane # Scanner Access Now Easy
 CopyFile /etc/sane.d/net.conf
 CopyFile /etc/sane.d/dll.conf
@@ -83,9 +83,11 @@ AddPackage lutris # Open Gaming Platform
 AddPackage wine-staging # A compatibility layer for running Windows programs - Staging branch
 
 # Minecraft
-# AddPackage --foreign prismlauncher-qt5-bin # Minecraft launcher with ability to manage multiple instances.
-# AddPackage qt5-wayland # Provides APIs for Wayland
-# AddPackage jdk8-openjdk # OpenJDK Java 8 development kit (needed for E6E)
+AddPackage prismlauncher # Minecraft launcher with ability to manage multiple instances
+AddPackage qt5-wayland # Provides APIs for Wayland
+AddPackage jdk-openjdk # OpenJDK Java 25 development kit
+AddPackage jdk8-openjdk # OpenJDK Java 8 development kit
+AddPackage --foreign lwjgl # Java library that enables access to OpenGL, OpenAL, Vulkan, and more.
 
 # CAD
 # AddPackage freecad # Feature based parametric 3D CAD modeler

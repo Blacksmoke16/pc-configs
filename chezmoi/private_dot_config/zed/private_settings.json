@@ -7,27 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": {
-    "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Material Icon Theme",
-  },
-  "tab_bar": {
-    "show_tab_bar_buttons": true,
-  },
-  "tabs": {
-    "file_icons": true,
-    "git_status": true,
-  },
   "buffer_font_family": "Roboto Mono",
   "git_panel": {
     "tree_view": false,
-    "sort_by_path": true,
   },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+  },
+  "icon_theme": "Material Icon Theme",
   "agent": {
     "button": false,
   },
-  "auto_indent_on_paste": false,
+  "auto_indent_on_paste": true,
   "auto_install_extensions": {
     "basher": true,
     "crystal": true,
@@ -60,7 +52,6 @@
   "file_types": {
     "Dockerfile": ["Dockerfile.*"],
     "YAML": ["shard.lock"],
-    "GitHub Actions": [".github/workflows/*.yml", ".github/workflows/*.yaml"],
   },
   "languages": {
     "Crystal": {
@@ -119,9 +110,9 @@
   "show_wrap_guides": true,
   "tab_size": 2,
   "theme": {
-    "mode": "system",
-    "light": "One Dark",
     "dark": "One Dark",
+    "light": "One Dark",
+    "mode": "system",
   },
   "ui_font_family": "Roboto Mono",
   "ui_font_size": 14,

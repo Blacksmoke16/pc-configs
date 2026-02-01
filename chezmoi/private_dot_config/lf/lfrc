@@ -50,3 +50,8 @@ cmd mkdir %{{
     mkdir $ans
 }}
 map md mkdir
+
+cmd normalize ${{
+for f in *; do dt=$(grep -oE '[0-9]{4}-?[0-9]{2}-?[0-9]{2}' <<<"$f" | awk 'NR==2{print;exit} NR==1{keep=$0} END{if(NR==1)print keep}'); [ -n "$dt" ] || continue; clean=${dt//-/}; iso=$(date -d "${clean:0:4}-${clean:4:2}-${clean:6:2}" +%F 2>/dev/null) || continue; ext="${f##*.}"; mv -- "$f" "$iso.${ext}"; done
+}}
+map n normalize

@@ -35,10 +35,16 @@ AddPackage nvm
 
 # PHP
 AddPackage php # A general-purpose scripting language that is especially suited to web development
+CopyFile /etc/php/conf.d/overrides.ini
 AddPackage composer # Dependency Manager for PHP
 AddPackage --foreign symfony-cli-bin # The Symfony client helps developers create and manage Symfony applications.
+AddPackage php-pgsql # PostgreSQL modules for PHP
 
 # PHP Dev
 # AddPackage autoconf # A GNU tool for automatically configuring source code
 # AddPackage bison # The GNU general-purpose parser generator
 # AddPackage re2c # A tool for generating C-based recognizers from regular expressions
+
+# Git (send-mail)
+AddPackage perl-authen-sasl # Perl/CPAN Module Authen::SASL : SASL authentication framework
+AddPackage --foreign perl-mime-base64-urlsafe # Perl version of Python's URL-safe base64 codec

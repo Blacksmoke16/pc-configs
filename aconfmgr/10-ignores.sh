@@ -42,6 +42,9 @@ IgnorePath '/etc/.updated'
 IgnorePath '/var/.updated'
 IgnorePath '/var/lib/systemd/network'
 
+IgnorePath '/etc/audisp'
+IgnorePath '/etc/audit/*'
+
 # random
 IgnorePath '/lost+found'
 IgnorePath '/etc/sgml/*'
@@ -122,6 +125,9 @@ IgnorePath '/etc/cni/*'
 
 # Java
 IgnorePath '/usr/lib/jvm/*'
+
+# PHP
+IgnorePath '/etc/php/php.ini'
 
 # Printing
 IgnorePath '/etc/colord'

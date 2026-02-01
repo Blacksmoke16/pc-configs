@@ -32,7 +32,7 @@ export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
 # Personal PC has customization to support the custom path.
 # Otherwise, just fallback on the default
-{{- if not .personal -}}
+{{- if .personal }}
 export BITWARDEN_SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/.bitwarden-ssh-agent.sock"
 
 {{ else }}
