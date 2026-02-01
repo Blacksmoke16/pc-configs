@@ -1,20 +1,18 @@
 {
-  "words": [
-    "keymap",
-    "unshift",
-    "nodoc",
+  "userWords": [
     "AMIME",
-    "mimetypes",
-    "showdoc",
     "ASPEC",
     "codegen",
-    "stdlib",
     "gsub",
+    "hasura",
+    "keymap",
+    "mercure",
+    "mimetypes",
     "nilable",
-    "hasura"
-  ],
-  "userWords": [
+    "nodoc",
+    "showdoc",
+    "stdlib",
     "uninstantiated",
-    "mercure"
+    "unshift"
   ]
 }

@@ -1,13 +1,14 @@
 set shell bash
 set shellopts '-eu'
+set dircounts true
+set dirfirst true
 set dirpreviews false
-
 set drawbox
+set previewer pistol
 set ratios 1:1
 set tabstop 2
-
-set previewer pistol
-set sixel true
+set icons false
+set watch true
 
 map c copy
 map x cut
@@ -40,16 +41,11 @@ cmd extract ${{
 
 map e extract
 
-cmd chezmoi-add ${{
-    chezmoi add "$f"
-}}
-
 cmd mkdir %{{
     printf "Make directory: "
     read ans
     mkdir $ans
 }}
-map md mkdir
 
 cmd normalize ${{
 for f in *; do dt=$(grep -oE '[0-9]{4}-?[0-9]{2}-?[0-9]{2}' <<<"$f" | awk 'NR==2{print;exit} NR==1{keep=$0} END{if(NR==1)print keep}'); [ -n "$dt" ] || continue; clean=${dt//-/}; iso=$(date -d "${clean:0:4}-${clean:4:2}-${clean:6:2}" +%F 2>/dev/null) || continue; ext="${f##*.}"; mv -- "$f" "$iso.${ext}"; done

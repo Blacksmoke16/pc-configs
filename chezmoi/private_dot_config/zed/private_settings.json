@@ -9,15 +9,15 @@
 {
   "buffer_font_family": "Roboto Mono",
   "git_panel": {
-    "tree_view": false,
+    "tree_view": false
   },
   "tabs": {
     "git_status": true,
-    "file_icons": true,
+    "file_icons": true
   },
   "icon_theme": "Material Icon Theme",
   "agent": {
-    "button": false,
+    "button": false
   },
   "auto_indent_on_paste": true,
   "auto_install_extensions": {
@@ -33,25 +33,25 @@
     "php": true,
     "sublime-mariana-theme": true,
     "terraform": true,
-    "typos": true,
+    "typos": true
   },
   "base_keymap": "SublimeText",
   "buffer_font_size": 14,
   "collaboration_panel": {
-    "button": false,
+    "button": false
   },
   "diagnostics": {
     "button": false,
     "include_warnings": true,
     "inline": {
-      "enabled": true,
-    },
+      "enabled": true
+    }
   },
   "diagnostics_max_severity": "hint",
   "disable_ai": true,
   "file_types": {
     "Dockerfile": ["Dockerfile.*"],
-    "YAML": ["shard.lock"],
+    "YAML": ["shard.lock"]
   },
   "languages": {
     "Crystal": {
@@ -59,28 +59,28 @@
       "formatter": {
         "external": {
           "arguments": ["tool", "format", "-"],
-          "command": "crystal",
-        },
+          "command": "crystal"
+        }
       },
-      "language_servers": ["ameba-ls", "typos", "cspell"],
+      "language_servers": ["ameba-ls", "typos", "cspell"]
     },
     "PHP": {
-      "language_servers": ["phpactor", "typos", "cspell"],
+      "language_servers": ["phpactor", "typos", "cspell"]
     },
     "Ruby": {
-      "language_servers": ["solargraph", "rubocop", "typos", "cspell"],
+      "language_servers": ["solargraph", "rubocop", "typos", "cspell"]
     },
     "Terraform": {
       "formatter": {
         "external": {
           "arguments": ["fmt", "-"],
-          "command": "terraform",
-        },
-      },
+          "command": "terraform"
+        }
+      }
     },
     "YAML": {
-      "formatter": "language_server",
-    },
+      "formatter": "language_server"
+    }
   },
   "lsp": {
     "yaml-language-server": {
@@ -88,23 +88,23 @@
         "yaml": {
           "format": {
             "printWidth": 999, // Disable this
-            "singleQuote": true,
-          },
-        },
-      },
-    },
+            "singleQuote": true
+          }
+        }
+      }
+    }
   },
   "minimap": {
-    "show": "always",
+    "show": "always"
   },
   "outline_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "scrollbar": {
-    "diagnostics": "none",
+    "diagnostics": "none"
   },
   "search": {
-    "button": false,
+    "button": false
   },
   "show_whitespaces": "all",
   "show_wrap_guides": true,
@@ -112,8 +112,8 @@
   "theme": {
     "dark": "One Dark",
     "light": "One Dark",
-    "mode": "system",
+    "mode": "system"
   },
   "ui_font_family": "Roboto Mono",
-  "ui_font_size": 14,
+  "ui_font_size": 14
 }
