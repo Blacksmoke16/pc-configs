@@ -9,7 +9,7 @@
 {
   "buffer_font_family": "Roboto Mono",
   "git_panel": {
-    "tree_view": false
+    "tree_view": true
   },
   "tabs": {
     "git_status": true,
@@ -31,7 +31,6 @@
     "just": true,
     "make": true,
     "php": true,
-    "sublime-mariana-theme": true,
     "terraform": true,
     "typos": true
   },
@@ -63,6 +62,12 @@
         }
       },
       "language_servers": ["ameba-ls", "typos", "cspell"]
+    },
+    "JSONC": {
+      "prettier": {
+        "parser": "json",
+        "trailingComma": "none"
+      }
     },
     "PHP": {
       "language_servers": ["phpactor", "typos", "cspell"]

@@ -1,15 +1,12 @@
 # General
 AddPackage just # A handy way to save and run project-specific commands
-AddPackage terraform # HashiCorp tool for building and updating infrastructure as code idempotently
 AddPackage opentofu # Lets you declaratively manage your cloud infrastructure
 AddPackage watchexec # Executes commands in response to file modifications
-AddPackage --foreign postman-bin # Build, test, and document your APIs faster
 AddPackage --foreign xxd-standalone # Hexdump utility from vim
 AddPackage bind # A complete, highly portable implementation of the DNS protocol
 AddPackage less # A terminal based program for viewing text files
 AddPackage rsync # A fast and versatile file copying tool for remote and local files (required for zed auto-update)
 AddPackage --foreign shellcheck-bin # Shell script analysis tool (binary release, static)
-AddPackage --foreign aws-cli-bin # Unified command line interface for Amazon Web Services (Amazon provided v2 binary release)
 AddPackage github-cli # The GitHub CLI
 
 # Docker
@@ -46,5 +43,5 @@ AddPackage php-pgsql # PostgreSQL modules for PHP
 # AddPackage re2c # A tool for generating C-based recognizers from regular expressions
 
 # Git (send-mail)
-AddPackage perl-authen-sasl # Perl/CPAN Module Authen::SASL : SASL authentication framework
-AddPackage --foreign perl-mime-base64-urlsafe # Perl version of Python's URL-safe base64 codec
+# AddPackage perl-authen-sasl # Perl/CPAN Module Authen::SASL : SASL authentication framework
+# AddPackage --foreign perl-mime-base64-urlsafe # Perl version of Python's URL-safe base64 codec

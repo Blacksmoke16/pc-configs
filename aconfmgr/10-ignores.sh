@@ -1,11 +1,18 @@
 # user
 IgnorePath '/etc/.pwd.lock'
+IgnorePath '/etc/passwd'
 IgnorePath '/etc/passwd-'
+IgnorePath '/etc/group'
 IgnorePath '/etc/group-'
 IgnorePath '/etc/shadow*'
 IgnorePath '/etc/gshadow*'
+IgnorePath '/etc/shells'
 IgnorePath '/var/db/sudo/lectured/*'
 IgnorePath '/var/db/nscd/*'
+
+# system
+IgnorePath '/etc/machine-id'
+IgnorePath '/etc/hosts'
 
 # files with dynamically set permissions
 IgnorePath '/usr/bin/groupmems'

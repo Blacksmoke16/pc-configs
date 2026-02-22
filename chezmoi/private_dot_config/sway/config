@@ -26,14 +26,6 @@ default_border none
 gaps inner 5
 gaps outer 5
 
-### Idle configuration
-
-exec swayidle -w \
-       timeout 300 'swaylock -f -c 000000' \
-       timeout 400 'swaymsg "output * dpms off"' \
-         resume 'swaymsg "output * dpms on"' \
-       before-sleep 'swaylock -f -c 000000'
-
 ### Input configuration
 
 input * xkb_numlock enable
@@ -65,12 +57,12 @@ input * xkb_numlock enable
     bindsym $mod+Right move right
 
 #
-# pulse audio controls:
+# audio controls:
 #
 
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+    bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 0.02-
+    bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 0.02+
 
 #
 # Media player controls:
@@ -122,6 +114,13 @@ bar {
 #
 # Start background services
 #
+
+exec swayidle -w \
+       timeout 300 'swaylock -f -c 000000' \
+       timeout 600 'swaymsg "output * dpms off"' \
+       timeout 1800 'systemctl suspend' \
+         resume 'swaymsg "output * dpms on"' \
+       before-sleep 'swaylock -f -c 000000'
 
 exec mako --history=1 --max-history=50
 exec wl-paste -t text --watch clipman store --no-persist

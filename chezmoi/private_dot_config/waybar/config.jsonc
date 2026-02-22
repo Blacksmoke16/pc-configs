@@ -1,4 +1,13 @@
 {
+  "battery": {
+    "bat": "BAT1",
+    "full-at": 80,
+    "format": "{capacity}% {icon}",
+    "format-icons": {
+      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+    }
+  },
   "clock": {
     "interval": 1,
     "format": "{:%a %F %H:%M:%S}",
@@ -29,13 +38,8 @@
     "format": "Mem {}%",
     "interval": 5
   },
-  "modules-center": [
-    "wlr/taskbar"
-  ],
-  "modules-left": [
-    "tray",
-    "custom/right-arrow-dark"
-  ],
+  "modules-center": ["wlr/taskbar"],
+  "modules-left": ["tray", "custom/right-arrow-dark", "battery"],
   "modules-right": [
     "custom/left-arrow-dark",
     "pulseaudio",

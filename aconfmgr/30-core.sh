@@ -8,7 +8,6 @@ CopyFile /etc/locale.conf
 
 # dns
 CopyFile /etc/hostname
-CopyFile /etc/hosts
 
 # pacman
 CopyFile /etc/pacman.conf
@@ -86,3 +85,8 @@ CreateLink /etc/systemd/system/sysinit.target.wants/systemd-resolved.service /us
 
 # enable wired networking
 CopyFile /etc/systemd/network/20-wired.network
+
+# systemd-logind
+cat >> "$(GetPackageOriginalFile systemd /etc/systemd/logind.conf)" <<EOF
+HandlePowerKey=ignore
+EOF

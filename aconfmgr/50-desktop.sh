@@ -68,13 +68,12 @@ CopyFile /etc/udev/rules.d/51-trezor.rules
 
 # Media
 AddPackage playerctl # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
-AddPackage pulseaudio # A featureful, general-purpose sound server
-AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
+AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
+AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 CreateLink /etc/systemd/user/pipewire-session-manager.service /usr/lib/systemd/user/wireplumber.service
 CreateLink /etc/systemd/user/pipewire.service.wants/wireplumber.service /usr/lib/systemd/user/wireplumber.service
+CreateLink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket /usr/lib/systemd/user/pipewire-pulse.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
-CreateLink /etc/systemd/user/sockets.target.wants/pulseaudio.socket /usr/lib/systemd/user/pulseaudio.socket
-CopyFile /etc/pulse/client.conf
 
 # Gaming
 AddPackage steam # Valve's digital software delivery system
