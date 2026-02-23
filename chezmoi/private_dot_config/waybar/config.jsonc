@@ -8,6 +8,13 @@
       "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
     }
   },
+
+  // Custom separator that only renders if the battery is available
+  "custom/battery-separator": {
+    "exec": "",
+    "exec-if": "test -e /sys/class/power_supply/BAT1",
+    "hide-empty-text": true
+  },
   "clock": {
     "interval": 1,
     "format": "{:%a %F %H:%M:%S}",
@@ -39,7 +46,7 @@
     "interval": 5
   },
   "modules-center": ["wlr/taskbar"],
-  "modules-left": ["tray", "custom/right-arrow-dark", "battery"],
+  "modules-left": ["tray", "custom/battery-separator", "battery"],
   "modules-right": [
     "custom/left-arrow-dark",
     "pulseaudio",

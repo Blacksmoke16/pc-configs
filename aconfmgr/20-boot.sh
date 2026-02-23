@@ -25,3 +25,4 @@ CreateDir /boot/EFI/Linux
 
 # initramfs
 CreateLink /etc/os-release ../usr/lib/os-release
+CreateLink /var/lib/dbus/machine-id /etc/machine-id

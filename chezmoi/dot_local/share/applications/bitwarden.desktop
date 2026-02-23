@@ -2,5 +2,5 @@
 Type=Application
 Name=Bitwarden
 # Not ideal, but not the end of the world
-Exec=env BITWARDEN_SSH_AUTH_SOCK=/run/user/1000/.bitwarden-ssh-agent.sock /home/george/.local/bin/bitwarden.AppImage
+Exec=env BITWARDEN_SSH_AUTH_SOCK=/run/user/1000/.bitwarden-ssh-agent.sock /home/george/.local/bin/bitwarden.AppImage --enable-features=UseOzonePlatform --ozone-platform=wayland -s %U
 Terminal=false

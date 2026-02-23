@@ -88,7 +88,8 @@ bindsym Print exec grim -g "$(slurp -d)" -t png - | wl-copy -t image/png
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+e layout toggle split stacking
+    bindsym $mod+e layout toggle split
+    bindsym $mod+s layout stacking
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+f floating toggle
@@ -126,5 +127,5 @@ exec mako --history=1 --max-history=50
 exec wl-paste -t text --watch clipman store --no-persist
 exec wlsunset -l 40.7 -L -80.3 -t 3500
 
-# TODO: Uncomment this once https://youtrack.jetbrains.com/issue/JBR-3206 is resolved.
+# TODO: Uncomment this once bitwarden natively supports Wayland
 # xwayland disable

@@ -1,31 +1,29 @@
-{{- /* Based on https://github.com/twpayne/dotfiles/blob/9da5dc4c90198d7b96bf974afb18c698716abd37/home/.chezmoi.toml.tmpl */ -}}
-
-{{- /* boolean feature tags */ -}}
-{{- $primary := false -}}{{/* true if this machine is my daily driver */}}
-{{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
-
+{{- $hostname := .chezmoi.fqdnHostname -}}
 {{- $email := "dev@dietrich.pub" -}}
-{{- $gitDir := "/dev/git" -}}
+{{- $relativeGitDir := promptStringOnce .git "relativeDir" "Where are git repos located" "dev/git"  -}}
 
-{{- $hostname := .chezmoi.hostname -}}
-{{- if eq $hostname "george.personal.desktop" -}}
-{{-   $primary = true -}}
-{{-   $personal = true -}}
-{{- else if eq $hostname "georges-MacBook-Pro" -}}
-{{-   $personal = true -}}
+{{- /* Parse out machine info based on hostname */ -}}
+{{- $isPrimary := eq $hostname "george.personal.desktop" -}}
+{{- $isPersonal := contains ".personal." $hostname -}}
+{{- $isLaptop := hasSuffix ".laptop" $hostname -}}
+
+{{- /* Fallback on prompts if the hostname is in an unexpected format */ -}}
+{{- if and (not $isPersonal) (not (contains ".work." $hostname)) -}}
+  {{- $isPersonal = promptBool "Is this a personal machine?" -}}
+  {{- $isLaptop = promptBool "Is this a laptop?" -}}
 {{- end -}}
 
-sourceDir: {{ promptString "sourceDir" | quote }}
 format: yaml
 diff:
   pager: diff-so-fancy | less --tabs=2 -RFX
 edit:
   minDuration: 0
 data:
-  personal: {{ $personal }}
-  primary: {{ $primary }}
-  hostname: {{ $hostname | quote }}
+  isPrimary: {{ $isPrimary }}
+  isPersonal: {{ $isPersonal }}
+  isLaptop: {{ $isLaptop }}
   email: {{ $email | quote }}
   name: 'George Dietrich'
   git:
-    dir: {{ joinPath .chezmoi.homeDir $gitDir | quote }}
+    relativeDir: {{ $relativeGitDir | quote }}
+    absoluteDir: {{ joinPath .chezmoi.homeDir $relativeGitDir | quote }}
