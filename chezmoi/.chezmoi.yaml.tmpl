@@ -1,6 +1,6 @@
 {{- $hostname := .chezmoi.fqdnHostname -}}
 {{- $email := "dev@dietrich.pub" -}}
-{{- $relativeGitDir := promptStringOnce .git "relativeDir" "Where are git repos located" "dev/git"  -}}
+{{- $relativeGitDir := promptStringOnce . "gitRelativeDir" "Where are git repos located" "dev/git"  -}}
 
 {{- /* Parse out machine info based on hostname */ -}}
 {{- $isPrimary := eq $hostname "george.personal.desktop" -}}
@@ -24,6 +24,5 @@ data:
   isLaptop: {{ $isLaptop }}
   email: {{ $email | quote }}
   name: 'George Dietrich'
-  git:
-    relativeDir: {{ $relativeGitDir | quote }}
-    absoluteDir: {{ joinPath .chezmoi.homeDir $relativeGitDir | quote }}
+  gitRelativeDir: {{ $relativeGitDir | quote }}
+  gitAbsoluteDir: {{ joinPath .chezmoi.homeDir $relativeGitDir | quote }}
