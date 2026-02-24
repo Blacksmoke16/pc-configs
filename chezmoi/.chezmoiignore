@@ -1,2 +1,21 @@
 # Use README's as documentation
 **/README.md
+
+{{ if not .isPrimary }}
+.config/gnucash/**
+
+gnucash-dconf-load.sh
+{{ end }}
+
+{{ if not .isPersonal }}
+.config/neofetch/**
+.config/pistol/**
+.config/sway/**
+.config/swaylock/**
+.config/systemd/**
+.config/waybar/**
+.config/yay/**
+
+.local/bin/sources/**
+.local/share/applications/*
+{{ end }}
