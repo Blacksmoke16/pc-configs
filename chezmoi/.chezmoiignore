@@ -3,8 +3,8 @@
 
 {{ if not .isPrimary }}
 .config/gnucash/**
-.config/systemd/user/gnucash-*
-.config/systemd/user/rsnapshot-*
+.config/systemd/user/gnucash*
+.config/systemd/user/rsnapshot*
 
 gnucash-dconf-load.sh
 {{ end }}
