@@ -14,6 +14,7 @@ set $monitorRight DP-3
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
+{{ if .isPrimary -}}
 output $monitorLeft pos 0 0 res 2560x1440
 output $monitorMiddle pos 2560 0 res 2560x1440
 output $monitorRight pos 5120 0 res 2560x1440
@@ -21,6 +22,7 @@ output $monitorRight pos 5120 0 res 2560x1440
 workspace 1 output $monitorLeft
 workspace 2 output $monitorMiddle
 workspace 3 output $monitorRigh
+{{ end -}}
 
 default_border none
 gaps inner 5

@@ -9,8 +9,8 @@
 
 {{- /* Fallback on prompts if the hostname is in an unexpected format */ -}}
 {{- if and (not $isPersonal) (not (contains ".work." $hostname)) -}}
-  {{- $isPersonal = promptBool "Is this a personal machine?" -}}
-  {{- $isLaptop = promptBool "Is this a laptop?" -}}
+  {{- $isPersonal = promptBool "Is this a personal machine" -}}
+  {{- $isLaptop = promptBool "Is this a laptop" -}}
 {{- end -}}
 
 format: yaml
